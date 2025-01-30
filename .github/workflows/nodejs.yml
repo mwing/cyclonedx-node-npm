@@ -5,14 +5,25 @@ name: Node CI
 
 on:
   push:
-    branches: [ 'master', '1.0-dev' ]
+    branches: [ 'main', 'master', 'next' ]
+    tags: [ 'v*' ]
   pull_request:
   workflow_dispatch:
+  schedule:
+    # schedule daily tests, since dependencies are not intended to be locked
+    # this means: at 23:42 every day
+    - cron: '42 23 * * *'
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: true
 
 env:
+  NODE_ACTIVE_LTS: '22'  # https://nodejs.org/en/about/releases/
   DIST_DIR: dist
-  REPORTS_DIR: reports
-  NODE_ACTIVE_LTS: '16'  # https://nodejs.org/en/about/releases/
+  REPORTS_DIR: "CI_reports"
+  TESTS_REPORTS_ARTIFACT: tests-reports
+  CNPM_TEST_UPDATE_SNAPSHOTS: ''  # set to a string that nodeJS would not evaluate to TRUE - which can only be an empty string
 
 jobs:
   build:
@@ -22,24 +33,25 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          cache: 'npm'
+          # cache: 'npm'
       - name: setup subject
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts --loglevel=silly
       - name: build
-        run: npm run build
+        run: npm run build-dev
       - name: artifact build result
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
           if-no-files-found: error
+
   test-standards:
     name: test standards
     timeout-minutes: 30
@@ -47,17 +59,18 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-          cache: 'npm'
+          # cache: 'npm'
       - name: install subject
-        run: npm ci
+        run: npm i --loglevel=silly
       - name: run tests
         run: npm run test:standard
+
   test-jest:
     needs: [ 'build' ]
     name: jest (node${{ matrix.node-version }} ${{ matrix.os }})
@@ -68,33 +81,63 @@ jobs:
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # Current
-          - '16'      # Active LTS
-          - '14'      # Maintenance LTS
-          - '14.0.0'  # Lowest supported by this project
+          - '22'      # Current
+          - '20'      # active LTS
+          - '18'
+          - '16'
+          - '14'
+          - '14.0.0'  # lowest supported
         os:
           - ubuntu-latest
           - windows-latest
-          # - macos-latest # hanging for unknown reasons. but is unix-like so "ubuntu-latest" should be enough
-    timeout-minutes: 10
+          - macos-13 # macos-latest has issues with node14
+    timeout-minutes: 15
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          # cache: 'npm'
+      - name: npm version
+        run: npm --version
       - name: setup subject
-        run: npm ci --ignore-scripts
+        shell: bash
+        run: |
+          set -ex
+          dep_constraints=''
+          dev_requirements='jest jest-junit imurmurhash fast-glob'
+          # as long as npm cannot auto-resolve engine-constraints, we need to help here
+          case '${{ matrix.node-version }}' in
+            '14')
+              dep_constraints='normalize-package-data@^5'
+              ;;
+            '14.0.0')
+              dep_constraints='normalize-package-data@^3'
+              dev_requirements='jest@^26 jest-junit imurmurhash fast-glob'
+              ;;
+          esac
+          ## !! dont install all the dev-packages, especially since some are not runnable on node 14.0.0
+          if [[ -n "$dep_constraints" ]]
+          then
+            npm add --ignore-scripts --omit=dev --only=prod --production --loglevel=silly --save $dep_constraints
+          fi
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
+          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2
+          ## install the needed dev-deps
+          npm i --ignore-scripts --loglevel=silly --no-save $dev_requirements
       - name: fetch build artifact
         # see https://github.com/actions/download-artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: ${{ env.DIST_DIR }}
           path: ${{ env.DIST_DIR }}
+      - name: setup-tests
+        run: npm run setup-tests
       - name: test
         run: >
           npm run test:jest -- 
@@ -102,19 +145,124 @@ jobs:
           --verbose
           --runInBand
           --logHeapUsage
+          --coverage
+          --coverageDirectory='${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}/coverage'
+        env:
+          JEST_JUNIT_OUTPUT_DIR: '${{ env.REPORTS_DIR }}/node${{ matrix.node-version }}_${{ matrix.os }}'
       - name: artifact test logs
         if: ${{ failure() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: logs-jest-node${{ matrix.node-version }}-${{ matrix.os }}
+          name: logs-jest_node${{ matrix.node-version }}_${{ matrix.os }}
           path: tests/_log
           if-no-files-found: error
       - name: artifact test reports
-        if: ${{ failure() }}
+        if: ${{ ! cancelled() }}
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: reports-jest-node${{ matrix.node-version }}-${{ matrix.os }}
+          name: '${{ env.TESTS_REPORTS_ARTIFACT }}_node${{ matrix.node-version }}_${{ matrix.os }}'
           path: ${{ env.REPORTS_DIR }}
           if-no-files-found: error
+
+  dogfooding:
+    needs: [ 'build' ]
+    name: dogfooding npm ${{ matrix.npm-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - npm-version: 'latest'
+          - npm-version: '^11'
+            ## "node": "^20.17.0 || >=22.9.0"
+            node-version: '^22.9'
+          - npm-version: '^10'
+            ## "node": "^18.17.0 || >=20.5.0"
+            node-version: '^20.5'
+          - npm-version: '^9'
+            ## "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+            node-version: '^18'
+          - npm-version: '^8'
+            ## "node": "^12.13.0 || ^14.15.0 || >=16"
+            # node-version: '^16' ## cannot pin due to https://github.com/npm/cli/issues/6743
+          - npm-version: '^7'
+            ## "node": ">=10"
+            # node-version: '^14'  ## cannot pin due to https://github.com/npm/cli/issues/6743
+          - npm-version: '^6'
+            ## "node": "6 >=6.2.0 || 8 || >=9.3.0"
+            # node-version: '^14'  ## cannot pin due to https://github.com/npm/cli/issues/6743
+    env:
+      npm_config_engine_strict: true
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        # see https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - run: mkdir -p ${{ env.REPORTS_DIR }}
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # see https://github.com/actions/setup-node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version || env.NODE_ACTIVE_LTS }}
+          # cache: 'npm'
+      - name: setup npm ${{ matrix.npm-version }}
+        run: |
+          npm i -g npm@${{ matrix.npm-version }}
+          npm --version
+      - name: setup subject
+        shell: bash
+        run: |
+          set -ex
+          npm i --ignore-scripts --omit=dev --only=prod --production --loglevel=silly
+          ## rebuild deps for which scripts were ignored, or partially installed - since "ignore-scripts" was used
+          npm rebuild --loglevel=silly libxmljs2 || npm uninstall --no-save libxmljs2 || true
+      - name: fetch build artifact
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.DIST_DIR }}
+          path: ${{ env.DIST_DIR }}
+      - name: dogfooding
+        run: >
+          node -- bin/cyclonedx-npm-cli.js
+          -vvv
+          --ignore-npm-errors
+          --omit=dev
+          --validate
+          --output-file=${{ env.REPORTS_DIR }}/bom.json
+      - name: artifact test reports
+        if: ${{ failure() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dogfooding-direct_npm${{ matrix.npm-version }}
+          path: ${{ env.REPORTS_DIR }}
+          if-no-files-found: error
+
+  report-coverage:
+    name: Publish test coverage
+    needs:
+      - test-jest
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: fetch test artifacts
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '${{ env.TESTS_REPORTS_ARTIFACT }}_*'
+          merge-multiple: true
+          path: ${{ env.REPORTS_DIR }}
+      - name: Run codacy-coverage-reporter
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        ## see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-secrets
+        if: ${{ env.CODACY_PROJECT_TOKEN != '' }}
+        # see https://github.com/codacy/codacy-coverage-reporter-action
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ env.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ${{ env.REPORTS_DIR }}/*/coverage/clover.xml
+

@@ -17,13 +17,14 @@ SPDX-License-Identifier: Apache-2.0
 Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
-import { resolve, dirname } from 'path'
-import { writeSync, openSync, existsSync } from 'fs'
+import { Builders, Enums, Factories, Serialize, Spec, Validation } from '@cyclonedx/cyclonedx-library'
+import { Argument, Command, Option } from 'commander'
+import { existsSync, mkdirSync, openSync } from 'fs'
+import { dirname, resolve } from 'path'
 
-import { Command, Option, Argument } from 'commander'
-import { Enums, Spec, Serialize, Builders, Factories } from '@cyclonedx/cyclonedx-library'
-
+import { loadJsonFile, writeAllSync } from './_helpers'
 import { BomBuilder, TreeBuilder } from './builders'
+import { makeConsoleLogger } from './logger'
 
 enum OutputFormat {
   JSON = 'JSON',
@@ -39,14 +40,19 @@ enum Omittable {
 const OutputStdOut = '-'
 
 interface CommandOptions {
+  ignoreNpmErrors: boolean
   packageLockOnly: boolean
   omit: Omittable[]
-  specVersion: Spec.Version
+  gatherLicenseTexts: boolean
   flattenComponents: boolean
+  shortPURLs: boolean
   outputReproducible: boolean
+  specVersion: Spec.Version
   outputFormat: OutputFormat
   outputFile: string
+  validate: boolean | undefined
   mcType: Enums.ComponentType
+  verbose: number
 }
 
 function makeCommand (process: NodeJS.Process): Command {
@@ -58,6 +64,12 @@ function makeCommand (process: NodeJS.Process): Command {
     '[options] [--] [<package-manifest>]'
   ).addOption(
     new Option(
+      '--ignore-npm-errors',
+      'Whether to ignore errors of NPM.\n' +
+      'This might be used, if "npm install" was run with "--force" or "--legacy-peer-deps".'
+    ).default(false)
+  ).addOption(
+    new Option(
       '--package-lock-only',
       'Whether to only use the lock file, ignoring "node_modules".\n' +
       'This means the output will be based only on the few details in and the tree described by the "npm-shrinkwrap.json" or "package-lock.json", rather than the contents of "node_modules" directory.'
@@ -65,30 +77,42 @@ function makeCommand (process: NodeJS.Process): Command {
   ).addOption(
     new Option(
       '--omit <type...>',
-      'Dependency types to omit from the installation tree.' +
+      'Dependency types to omit from the installation tree. ' +
       '(can be set multiple times)'
     ).choices(
-      Object.values(Omittable)
+      Object.values(Omittable).sort()
     ).default(
       process.env.NODE_ENV === 'production'
         ? [Omittable.Dev]
         : [],
-      '"dev" if the NODE_ENV environment variable is set to "production", otherwise empty.'
+      `"${Omittable.Dev}" if the NODE_ENV environment variable is set to "production", otherwise empty`
     )
+  ).addOption(
+    new Option(
+      '--gather-license-texts',
+      'Search for license files in components and include them as license evidence.\n' +
+      'This feature is experimental.'
+    ).default(false)
   ).addOption(
     new Option(
       '--flatten-components',
       'Whether to flatten the components.\n' +
-      'This means the original nesting of components is not represented in the output.'
+      'This means the actual nesting of node packages is not represented in the SBOM result.'
+    ).default(false)
+  ).addOption(
+    new Option(
+      '--short-PURLs',
+      'Omit all qualifiers from PackageURLs.\n' +
+      'This causes information loss in trade-off shorter PURLs, which might improve ingesting these strings.'
     ).default(false)
   ).addOption(
     new Option(
       '--spec-version <version>',
       'Which version of CycloneDX spec to use.'
     ).choices(
-      Object.keys(Spec.SpecVersionDict)
+      Object.keys(Spec.SpecVersionDict).sort()
     ).default(
-      Spec.Version.v1dot4
+      Spec.Version.v1dot6
     )
   ).addOption(
     new Option(
@@ -104,14 +128,14 @@ function makeCommand (process: NodeJS.Process): Command {
         '--output-format <format>',
         'Which output format to use.'
       ).choices(
-        Object.values(OutputFormat)
+        [OutputFormat.JSON, OutputFormat.XML]
       ).default(
-        // the context is JavaScript - which should prefer JSON
+        // the context is node/JavaScript - which should prefer JSON
         OutputFormat.JSON
       )
       const oldParseArg = o.parseArg ?? // might do input validation on choices, etc...
-        (v => v) // fallback
-      // @ts-expect-error TS2304
+        (v => v) // fallback: pass-through
+      /* @ts-expect-error TS2304 */
       o.parseArg = (v, p) => oldParseArg(v.toUpperCase(), p)
       return o
     })()
@@ -126,6 +150,17 @@ function makeCommand (process: NodeJS.Process): Command {
     )
   ).addOption(
     new Option(
+      '--validate',
+      'Validate resulting BOM before outputting. ' +
+      'Validation is skipped, if requirements not met. See the README.'
+    ).default(undefined)
+  ).addOption(
+    new Option(
+      '--no-validate',
+      'Disable validation of resulting BOM.'
+    )
+  ).addOption(
+    new Option(
       '--mc-type <type>',
       'Type of the main component.'
     ).choices(
@@ -134,85 +169,95 @@ function makeCommand (process: NodeJS.Process): Command {
         Enums.ComponentType.Application,
         Enums.ComponentType.Firmware,
         Enums.ComponentType.Library
-      ]
+      ].sort()
     ).default(
       Enums.ComponentType.Application
     )
+  ).addOption(
+    new Option(
+      '-v, --verbose',
+      'Increase the verbosity of messages. Use multiple times to increase the verbosity even more.'
+    ).argParser<number>(
+      function (_: any, previous: number): number {
+        return previous + 1
+      }
+    ).default(0)
   ).addArgument(
     new Argument(
       '[<package-manifest>]',
       "Path to project's manifest file."
     ).default(
       'package.json',
-      '"package.json" file in current working directory.'
+      '"package.json" file in current working directory'
     )
   ).version(
     // that is supposed to be the last option in the list on the help page.
-    /* eslint-disable-next-line @typescript-eslint/no-var-requires */
-    require('../package.json').version as string
+    loadJsonFile(resolve(module.path, '..', 'package.json')).version as string
   ).allowExcessArguments(
     false
   )
 }
 
-export function run (process: NodeJS.Process): void {
-  process.title = 'cyclonedx-node-npm'
+const ExitCode: Readonly<Record<string, number>> = Object.freeze({
+  SUCCESS: 0,
+  FAILURE: 1,
+  INVALID: 2
+})
 
-  // all output shall be bound to stdError - stdOut is for result output only
-  const myConsole = new console.Console(process.stderr, process.stderr)
+export async function run (process: NodeJS.Process): Promise<number> {
+  process.title = 'cyclonedx-node-npm'
 
   const program = makeCommand(process)
   program.parse(process.argv)
 
   const options: CommandOptions = program.opts()
+  const myConsole = makeConsoleLogger(process, options.verbose)
   myConsole.debug('DEBUG | options: %j', options)
 
   const packageFile = resolve(process.cwd(), program.args[0] ?? 'package.json')
   if (!existsSync(packageFile)) {
     throw new Error(`missing project's manifest file: ${packageFile}`)
   }
-  myConsole.debug('DEBUG | packageFile: %s', packageFile)
+  myConsole.debug('DEBUG | packageFile:', packageFile)
   const projectDir = dirname(packageFile)
-  myConsole.debug('DEBUG | projectDir: %s', projectDir)
+  myConsole.info('INFO  | projectDir:', projectDir)
 
-  /**
-   * The path to the used npm lock file.
-   *
-   * > If both `package-lock.json` and `npm-shrinkwrap.json` are present in a package root,
-   * > `npm-shrinkwrap.json` will be preferred over the `package-lock.json` file.
-   * source: {@link https://docs.npmjs.com/cli/v8/configuring-npm/npm-shrinkwrap-json}
-   */
-  let lockFile: string
-  const shrinkwrapFile = resolve(projectDir, 'npm-shrinkwrap.json')
-  const packageLockFile = resolve(projectDir, 'package-lock.json')
-  if (existsSync(shrinkwrapFile)) {
-    lockFile = shrinkwrapFile
-  } else if (existsSync(packageLockFile)) {
-    lockFile = packageLockFile
+  if (existsSync(resolve(projectDir, 'npm-shrinkwrap.json'))) {
+    myConsole.info('INFO  | detected a npm shrinkwrap file')
+  } else if (existsSync(resolve(projectDir, 'package-lock.json'))) {
+    myConsole.info('INFO  | detected a package lock file')
+  } else if (!options.packageLockOnly && existsSync(resolve(projectDir, 'node_modules'))) {
+    myConsole.info('INFO  | detected a `node_modules` dir')
+    // npm7 and later also might put a `node_modules/.package-lock.json` file
   } else {
-    throw new Error('missing package lock file or npm shrinkwrap file')
+    myConsole.warn('WARN  | ? Did you forget to run `npm install` on your project accordingly ?')
+    myConsole.error('ERROR | No evidence: no package lock file nor npm shrinkwrap file')
+    if (!options.packageLockOnly) {
+      myConsole.error('ERROR | No evidence: no `node_modules` dir')
+    }
+    throw new Error('missing evidence')
   }
-  myConsole.debug('DEBUG | lockFile: %s', lockFile)
 
-  const extRefFactory = new Factories.FromNodePackageJson.ExternalReferenceFactory()
-
+  myConsole.log('LOG   | gathering BOM data ...')
   const bom = new BomBuilder(
-    new Builders.FromNodePackageJson.ToolBuilder(extRefFactory),
     new Builders.FromNodePackageJson.ComponentBuilder(
-      extRefFactory,
+      new Factories.FromNodePackageJson.ExternalReferenceFactory(),
       new Factories.LicenseFactory()
     ),
     new TreeBuilder(),
-    new Factories.PackageUrlFactory('npm'),
+    new Factories.FromNodePackageJson.PackageUrlFactory('npm'),
     {
+      ignoreNpmErrors: options.ignoreNpmErrors,
       metaComponentType: options.mcType,
       packageLockOnly: options.packageLockOnly,
       omitDependencyTypes: options.omit,
+      gatherLicenseTexts: options.gatherLicenseTexts,
       reproducible: options.outputReproducible,
-      flattenComponents: options.flattenComponents
+      flattenComponents: options.flattenComponents,
+      shortPURLs: options.shortPURLs
     },
     myConsole
-  ).buildFromLockFile(lockFile, process)
+  ).buildFromProjectDir(projectDir, process)
 
   const spec = Spec.SpecVersionDict[options.specVersion]
   if (undefined === spec) {
@@ -220,24 +265,68 @@ export function run (process: NodeJS.Process): void {
   }
 
   let serializer: Serialize.Types.Serializer
+  let validator: Validation.Types.Validator
   switch (options.outputFormat) {
     case OutputFormat.XML:
       serializer = new Serialize.XmlSerializer(new Serialize.XML.Normalize.Factory(spec))
+      validator = new Validation.XmlValidator(spec.version)
       break
     case OutputFormat.JSON:
       serializer = new Serialize.JsonSerializer(new Serialize.JSON.Normalize.Factory(spec))
+      validator = new Validation.JsonValidator(spec.version)
       break
   }
 
-  // TODO use instead ? : https://www.npmjs.com/package/debug ?
-  myConsole.info('INFO  | writing BOM to', options.outputFile)
-  writeSync(
+  myConsole.log('LOG   | serializing BOM ...')
+  const serialized = serializer.serialize(bom, {
+    sortLists: options.outputReproducible,
+    space: 2
+  })
+
+  if (options.validate ?? true) {
+    myConsole.log('LOG   | try validating BOM result ...')
+    try {
+      const validationErrors = await validator.validate(serialized)
+      if (validationErrors === null) {
+        myConsole.info('INFO  | BOM result appears valid')
+      } else {
+        myConsole.debug('DEBUG | BOM result invalid. details: ', validationErrors)
+        myConsole.error('ERROR | Failed to generate valid BOM.')
+        myConsole.warn(
+          'WARN  | Please report the issue and provide the npm lock file of the current project to:\n' +
+          '      | https://github.com/CycloneDX/cyclonedx-node-npm/issues/new?template=ValidationError-report.md&labels=ValidationError&title=%5BValidationError%5D')
+        return ExitCode.FAILURE
+      }
+    } catch (err) {
+      if (err instanceof Validation.MissingOptionalDependencyError) {
+        if (options.validate === true) {
+          // if explicitly requested to validate, then warn about skip
+          myConsole.warn('WARN  | skipped validating BOM:', err.message)
+          // @TODO breaking change: forward error, do not skip/continue
+        } else {
+          myConsole.info('INFO  | skipped validating BOM:', err.message)
+        }
+      } else {
+        myConsole.error('ERROR | unexpected error')
+        throw err
+      }
+    }
+  }
+  const directory = dirname(options.outputFile)
+  if (!existsSync(directory)) {
+    myConsole.info('INFO  | creating directory', directory)
+    mkdirSync(directory, { recursive: true })
+  }
+  myConsole.log('LOG   | writing BOM to', options.outputFile)
+  const written = await writeAllSync(
     options.outputFile === OutputStdOut
       ? process.stdout.fd
       : openSync(resolve(process.cwd(), options.outputFile), 'w'),
-    serializer.serialize(bom, {
-      sortLists: options.outputReproducible,
-      space: 2
-    })
+    serialized
   )
+  myConsole.info('INFO  | wrote %d bytes to %s', written, options.outputFile)
+
+  return written > 0
+    ? ExitCode.SUCCESS
+    : ExitCode.FAILURE
 }

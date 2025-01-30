@@ -16,7 +16,7 @@ npm ci
 ## Build from source
 
 ```shell
-npm run build
+npm run build-dev
 ```
 
 ## Testing
@@ -41,11 +41,11 @@ Apply the coding style via:
 npm run cs-fix
 ```
 
-## Sign your commits
+## Sign off your commits
 
-Please sign your commits,
-to show that you agree to publish your changes under the current terms and licenses of the project.
+Please sign off your commits, to show that you agree to publish your changes under the current terms and licenses of the project
+, and to indicate agreement with [Developer Certificate of Origin (DCO)](https://developercertificate.org/).
 
 ```shell
-git commit --signed-off ...
+git commit --signoff ...
 ```

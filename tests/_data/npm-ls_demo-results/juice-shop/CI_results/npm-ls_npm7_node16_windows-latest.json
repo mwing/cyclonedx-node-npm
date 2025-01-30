@@ -112,15 +112,15 @@
   "peerDependencies": {},
   "dependencies": {
     "body-parser": {
-      "version": "1.20.0",
-      "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.0.tgz",
+      "version": "1.20.1",
+      "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz",
       "name": "body-parser",
-      "integrity": "sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==",
+      "integrity": "sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==",
       "engines": {
         "node": ">= 0.8",
         "npm": "1.2.8000 || >= 1.4.16"
       },
-      "_id": "body-parser@1.20.0",
+      "_id": "body-parser@1.20.1",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\body-parser",
       "_dependencies": {
@@ -132,7 +132,7 @@
         "http-errors": "2.0.0",
         "iconv-lite": "0.4.24",
         "on-finished": "2.4.1",
-        "qs": "6.10.3",
+        "qs": "6.11.0",
         "raw-body": "2.5.1",
         "type-is": "~1.6.18",
         "unpipe": "1.0.0"
@@ -370,17 +370,17 @@
           "peerDependencies": {}
         },
         "qs": {
-          "version": "6.10.3",
-          "resolved": "https://registry.npmjs.org/qs/-/qs-6.10.3.tgz",
+          "version": "6.11.0",
+          "resolved": "https://registry.npmjs.org/qs/-/qs-6.11.0.tgz",
           "name": "qs",
-          "integrity": "sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==",
+          "integrity": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==",
           "engines": {
             "node": ">=0.6"
           },
           "funding": {
             "url": "https://github.com/sponsors/ljharb"
           },
-          "_id": "qs@6.10.3",
+          "_id": "qs@6.11.0",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\qs",
           "_dependencies": {
@@ -439,14 +439,14 @@
                       "peerDependencies": {}
                     },
                     "get-intrinsic": {
-                      "version": "1.1.2",
+                      "version": "1.1.3",
                       "name": "get-intrinsic",
-                      "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                      "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
+                      "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
+                      "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
                       "funding": {
                         "url": "https://github.com/sponsors/ljharb"
                       },
-                      "_id": "get-intrinsic@1.1.2",
+                      "_id": "get-intrinsic@1.1.3",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
                       "_dependencies": {
@@ -460,14 +460,14 @@
                   }
                 },
                 "get-intrinsic": {
-                  "version": "1.1.2",
-                  "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
+                  "version": "1.1.3",
+                  "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
                   "name": "get-intrinsic",
-                  "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
+                  "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
                   "funding": {
                     "url": "https://github.com/sponsors/ljharb"
                   },
-                  "_id": "get-intrinsic@1.1.2",
+                  "_id": "get-intrinsic@1.1.3",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
                   "_dependencies": {
@@ -765,11 +765,14 @@
               "peerDependencies": {}
             },
             "minimist": {
-              "version": "0.2.1",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.2.1.tgz",
+              "version": "0.2.2",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.2.2.tgz",
               "name": "minimist",
-              "integrity": "sha512-GY8fANSrTMfBVfInqJAY41QkOM+upUTytK1jZ0c8+3HdHrJxBJ3rF5i9moClXTE8uUSnUo8cAsCoxDXvSY4DHg==",
-              "_id": "minimist@0.2.1",
+              "integrity": "sha512-g92kDfAOAszDRtHNagjZPPI/9lfOFaRBL/Ud6Z0RKZua/x+49awTydZLh5Gkhb80Xy5hmcvZNLGzscW5n5yd0g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@0.2.2",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\bower-config\\node_modules\\minimist",
               "_dependencies": {},
@@ -777,11 +780,11 @@
               "peerDependencies": {}
             },
             "mout": {
-              "version": "1.2.3",
-              "resolved": "https://registry.npmjs.org/mout/-/mout-1.2.3.tgz",
+              "version": "1.2.4",
+              "resolved": "https://registry.npmjs.org/mout/-/mout-1.2.4.tgz",
               "name": "mout",
-              "integrity": "sha512-vtE+eZcSj/sBkIp6gxB87MznryWP+gHIp0XX9SKrzA5TAkvz6y7VTuNruBjYdJozd8NY5i9XVIsn8cn3SwNjzg==",
-              "_id": "mout@1.2.3",
+              "integrity": "sha512-mZb9uOruMWgn/fw28DG4/yE3Kehfk1zKCLhuDU2O3vlKdnBBr4XaOCqVTflJ5aODavGUPqFHZgrFX3NJVuxGhQ==",
+              "_id": "mout@1.2.4",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\mout",
               "_dependencies": {},
@@ -4780,11 +4783,14 @@
           "peerDependencies": {}
         },
         "minimist": {
-          "version": "1.2.6",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
+          "version": "1.2.7",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
           "name": "minimist",
-          "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-          "_id": "minimist@1.2.6",
+          "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+          "funding": {
+            "url": "https://github.com/sponsors/ljharb"
+          },
+          "_id": "minimist@1.2.7",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
           "_dependencies": {},
@@ -5070,10 +5076,10 @@
           "peerDependencies": {}
         },
         "date-fns": {
-          "version": "2.29.2",
-          "resolved": "https://registry.npmjs.org/date-fns/-/date-fns-2.29.2.tgz",
+          "version": "2.29.3",
+          "resolved": "https://registry.npmjs.org/date-fns/-/date-fns-2.29.3.tgz",
           "name": "date-fns",
-          "integrity": "sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==",
+          "integrity": "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==",
           "engines": {
             "node": ">=0.11"
           },
@@ -5081,7 +5087,7 @@
             "type": "opencollective",
             "url": "https://opencollective.com/date-fns"
           },
-          "_id": "date-fns@2.29.2",
+          "_id": "date-fns@2.29.3",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\date-fns",
           "_dependencies": {},
@@ -6057,18 +6063,18 @@
       }
     },
     "config": {
-      "version": "3.3.7",
-      "resolved": "https://registry.npmjs.org/config/-/config-3.3.7.tgz",
+      "version": "3.3.8",
+      "resolved": "https://registry.npmjs.org/config/-/config-3.3.8.tgz",
       "name": "config",
-      "integrity": "sha512-mX/n7GKDYZMqvvkY6e6oBY49W8wxdmQt+ho/5lhwFDXqQW9gI+Ahp8EKp8VAbISPnmf2+Bv5uZK7lKXZ6pf1aA==",
+      "integrity": "sha512-rFzF6VESOdp7wAXFlB9IOZI4ouL05g3A03v2eRcTHj2JBQaTNJ40zhAUl5wRbWHqLZ+uqp/7OE0BWWtAVgrong==",
       "engines": {
         "node": ">= 10.0.0"
       },
-      "_id": "config@3.3.7",
+      "_id": "config@3.3.8",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\config",
       "_dependencies": {
-        "json5": "^2.1.1"
+        "json5": "^2.2.1"
       },
       "devDependencies": {},
       "peerDependencies": {},
@@ -8433,20 +8439,20 @@
       "devDependencies": {},
       "dependencies": {
         "express": {
-          "version": "4.18.1",
+          "version": "4.18.2",
           "name": "express",
-          "resolved": "https://registry.npmjs.org/express/-/express-4.18.1.tgz",
-          "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==",
+          "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+          "integrity": "sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==",
           "engines": {
             "node": ">= 0.10.0"
           },
-          "_id": "express@4.18.1",
+          "_id": "express@4.18.2",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\express",
           "_dependencies": {
             "accepts": "~1.3.8",
             "array-flatten": "1.1.1",
-            "body-parser": "1.20.0",
+            "body-parser": "1.20.1",
             "content-disposition": "0.5.4",
             "content-type": "~1.0.4",
             "cookie": "0.5.0",
@@ -8465,7 +8471,7 @@
             "parseurl": "~1.3.3",
             "path-to-regexp": "0.1.7",
             "proxy-addr": "~2.0.7",
-            "qs": "6.10.3",
+            "qs": "6.11.0",
             "range-parser": "~1.2.1",
             "safe-buffer": "5.2.1",
             "send": "0.18.0",
@@ -8494,20 +8500,20 @@
       "peerDependencies": {}
     },
     "express": {
-      "version": "4.18.1",
-      "resolved": "https://registry.npmjs.org/express/-/express-4.18.1.tgz",
+      "version": "4.18.2",
+      "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
       "name": "express",
-      "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==",
+      "integrity": "sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==",
       "engines": {
         "node": ">= 0.10.0"
       },
-      "_id": "express@4.18.1",
+      "_id": "express@4.18.2",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\express",
       "_dependencies": {
         "accepts": "~1.3.8",
         "array-flatten": "1.1.1",
-        "body-parser": "1.20.0",
+        "body-parser": "1.20.1",
         "content-disposition": "0.5.4",
         "content-type": "~1.0.4",
         "cookie": "0.5.0",
@@ -8526,7 +8532,7 @@
         "parseurl": "~1.3.3",
         "path-to-regexp": "0.1.7",
         "proxy-addr": "~2.0.7",
-        "qs": "6.10.3",
+        "qs": "6.11.0",
         "range-parser": "~1.2.1",
         "safe-buffer": "5.2.1",
         "send": "0.18.0",
@@ -8571,15 +8577,15 @@
           "peerDependencies": {}
         },
         "body-parser": {
-          "version": "1.20.0",
+          "version": "1.20.1",
           "name": "body-parser",
-          "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.0.tgz",
-          "integrity": "sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==",
+          "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz",
+          "integrity": "sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==",
           "engines": {
             "node": ">= 0.8",
             "npm": "1.2.8000 || >= 1.4.16"
           },
-          "_id": "body-parser@1.20.0",
+          "_id": "body-parser@1.20.1",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\body-parser",
           "_dependencies": {
@@ -8591,7 +8597,7 @@
             "http-errors": "2.0.0",
             "iconv-lite": "0.4.24",
             "on-finished": "2.4.1",
-            "qs": "6.10.3",
+            "qs": "6.11.0",
             "raw-body": "2.5.1",
             "type-is": "~1.6.18",
             "unpipe": "1.0.0"
@@ -8983,17 +8989,17 @@
           "peerDependencies": {}
         },
         "qs": {
-          "version": "6.10.3",
+          "version": "6.11.0",
           "name": "qs",
-          "resolved": "https://registry.npmjs.org/qs/-/qs-6.10.3.tgz",
-          "integrity": "sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==",
+          "resolved": "https://registry.npmjs.org/qs/-/qs-6.11.0.tgz",
+          "integrity": "sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==",
           "engines": {
             "node": ">=0.6"
           },
           "funding": {
             "url": "https://github.com/sponsors/ljharb"
           },
-          "_id": "qs@6.10.3",
+          "_id": "qs@6.11.0",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\qs",
           "_dependencies": {
@@ -10144,11 +10150,11 @@
               "peerDependencies": {}
             },
             "util": {
-              "version": "0.12.4",
-              "resolved": "https://registry.npmjs.org/util/-/util-0.12.4.tgz",
+              "version": "0.12.5",
+              "resolved": "https://registry.npmjs.org/util/-/util-0.12.5.tgz",
               "name": "util",
-              "integrity": "sha512-bxZ9qtSlGUWSOy9Qa9Xgk11kSslpuZwaxCg4sNIDj6FLucDab2JxnHwyNTCpHMtK1MjoQiWQ6DiUMZYbSrO+Sw==",
-              "_id": "util@0.12.4",
+              "integrity": "sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==",
+              "_id": "util@0.12.5",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\util",
               "_dependencies": {
@@ -10156,7 +10162,6 @@
                 "is-arguments": "^1.0.4",
                 "is-generator-function": "^1.0.7",
                 "is-typed-array": "^1.1.3",
-                "safe-buffer": "^5.1.2",
                 "which-typed-array": "^1.1.2"
               },
               "devDependencies": {},
@@ -10298,24 +10303,24 @@
                   }
                 },
                 "is-typed-array": {
-                  "version": "1.1.9",
-                  "resolved": "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.9.tgz",
+                  "version": "1.1.10",
+                  "resolved": "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.10.tgz",
                   "name": "is-typed-array",
-                  "integrity": "sha512-kfrlnTTn8pZkfpJMUgYD7YZ3qzeJgWUn8XfVYBARc4wnmNOmLbmuuaAs3q5fvB0UJOn6yHAKaGTPM7d6ezoD/A==",
+                  "integrity": "sha512-PJqgEHiWZvMpaFZ3uTc8kHPM4+4ADTlDniuQL7cU/UDA0Ql7F70yGfHph3cLNe+c9toaigv+DFzTJKhc2CtO6A==",
                   "engines": {
                     "node": ">= 0.4"
                   },
                   "funding": {
                     "url": "https://github.com/sponsors/ljharb"
                   },
-                  "_id": "is-typed-array@1.1.9",
+                  "_id": "is-typed-array@1.1.10",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-typed-array",
                   "_dependencies": {
                     "available-typed-arrays": "^1.0.5",
                     "call-bind": "^1.0.2",
-                    "es-abstract": "^1.20.0",
                     "for-each": "^0.3.3",
+                    "gopd": "^1.0.1",
                     "has-tostringtag": "^1.0.0"
                   },
                   "devDependencies": {},
@@ -10357,1035 +10362,6 @@
                       "devDependencies": {},
                       "peerDependencies": {}
                     },
-                    "es-abstract": {
-                      "version": "1.20.1",
-                      "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.1.tgz",
-                      "name": "es-abstract",
-                      "integrity": "sha512-WEm2oBhfoI2sImeM4OF2zE2V3BYdSF+KnSi9Sidz51fQHd7+JuF8Xgcj9/0o+OWeIeIS/MiuNnlruQrJf16GQA==",
-                      "engines": {
-                        "node": ">= 0.4"
-                      },
-                      "funding": {
-                        "url": "https://github.com/sponsors/ljharb"
-                      },
-                      "_id": "es-abstract@1.20.1",
-                      "extraneous": false,
-                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\es-abstract",
-                      "_dependencies": {
-                        "call-bind": "^1.0.2",
-                        "es-to-primitive": "^1.2.1",
-                        "function-bind": "^1.1.1",
-                        "function.prototype.name": "^1.1.5",
-                        "get-intrinsic": "^1.1.1",
-                        "get-symbol-description": "^1.0.0",
-                        "has": "^1.0.3",
-                        "has-property-descriptors": "^1.0.0",
-                        "has-symbols": "^1.0.3",
-                        "internal-slot": "^1.0.3",
-                        "is-callable": "^1.2.4",
-                        "is-negative-zero": "^2.0.2",
-                        "is-regex": "^1.1.4",
-                        "is-shared-array-buffer": "^1.0.2",
-                        "is-string": "^1.0.7",
-                        "is-weakref": "^1.0.2",
-                        "object-inspect": "^1.12.0",
-                        "object-keys": "^1.1.1",
-                        "object.assign": "^4.1.2",
-                        "regexp.prototype.flags": "^1.4.3",
-                        "string.prototype.trimend": "^1.0.5",
-                        "string.prototype.trimstart": "^1.0.5",
-                        "unbox-primitive": "^1.0.2"
-                      },
-                      "devDependencies": {},
-                      "peerDependencies": {},
-                      "dependencies": {
-                        "call-bind": {
-                          "version": "1.0.2",
-                          "name": "call-bind",
-                          "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                          "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "call-bind@1.0.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                          "_dependencies": {
-                            "function-bind": "^1.1.1",
-                            "get-intrinsic": "^1.0.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "es-to-primitive": {
-                          "version": "1.2.1",
-                          "resolved": "https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.2.1.tgz",
-                          "name": "es-to-primitive",
-                          "integrity": "sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "es-to-primitive@1.2.1",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\es-to-primitive",
-                          "_dependencies": {
-                            "is-callable": "^1.1.4",
-                            "is-date-object": "^1.0.1",
-                            "is-symbol": "^1.0.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "is-callable": {
-                              "version": "1.2.4",
-                              "name": "is-callable",
-                              "resolved": "https://registry.npmjs.org/is-callable/-/is-callable-1.2.4.tgz",
-                              "integrity": "sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "is-callable@1.2.4",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-callable",
-                              "_dependencies": {},
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "is-date-object": {
-                              "version": "1.0.5",
-                              "name": "is-date-object",
-                              "resolved": "https://registry.npmjs.org/is-date-object/-/is-date-object-1.0.5.tgz",
-                              "integrity": "sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "is-date-object@1.0.5",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-date-object",
-                              "_dependencies": {
-                                "has-tostringtag": "^1.0.0"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "is-symbol": {
-                              "version": "1.0.4",
-                              "name": "is-symbol",
-                              "resolved": "https://registry.npmjs.org/is-symbol/-/is-symbol-1.0.4.tgz",
-                              "integrity": "sha512-C/CPBqKWnvdcxqIARxyOh4v1UUEOCHpgDa0WYgpKDFMszcrPcffg5uhwSgPCLD2WWxmq6isisz87tzT01tuGhg==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "is-symbol@1.0.4",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-symbol",
-                              "_dependencies": {
-                                "has-symbols": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "function-bind": {
-                          "version": "1.1.1",
-                          "name": "function-bind",
-                          "resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz",
-                          "integrity": "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==",
-                          "_id": "function-bind@1.1.1",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\function-bind",
-                          "_dependencies": {},
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "function.prototype.name": {
-                          "version": "1.1.5",
-                          "resolved": "https://registry.npmjs.org/function.prototype.name/-/function.prototype.name-1.1.5.tgz",
-                          "name": "function.prototype.name",
-                          "integrity": "sha512-uN7m/BzVKQnCUF/iW8jYea67v++2u7m5UgENbHRtdDVclOUP+FMPlCNdmk0h/ysGyo2tavMJEDqJAkJdRa1vMA==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "function.prototype.name@1.1.5",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\function.prototype.name",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "define-properties": "^1.1.3",
-                            "es-abstract": "^1.19.0",
-                            "functions-have-names": "^1.2.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "define-properties": {
-                              "version": "1.1.4",
-                              "name": "define-properties",
-                              "resolved": "https://registry.npmjs.org/define-properties/-/define-properties-1.1.4.tgz",
-                              "integrity": "sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "define-properties@1.1.4",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\define-properties",
-                              "_dependencies": {
-                                "has-property-descriptors": "^1.0.0",
-                                "object-keys": "^1.1.1"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "es-abstract": {
-                              "version": "1.20.1",
-                              "name": "es-abstract",
-                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.1.tgz",
-                              "integrity": "sha512-WEm2oBhfoI2sImeM4OF2zE2V3BYdSF+KnSi9Sidz51fQHd7+JuF8Xgcj9/0o+OWeIeIS/MiuNnlruQrJf16GQA==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "es-abstract@1.20.1",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\es-abstract",
-                              "_dependencies": {
-                                "call-bind": "^1.0.2",
-                                "es-to-primitive": "^1.2.1",
-                                "function-bind": "^1.1.1",
-                                "function.prototype.name": "^1.1.5",
-                                "get-intrinsic": "^1.1.1",
-                                "get-symbol-description": "^1.0.0",
-                                "has": "^1.0.3",
-                                "has-property-descriptors": "^1.0.0",
-                                "has-symbols": "^1.0.3",
-                                "internal-slot": "^1.0.3",
-                                "is-callable": "^1.2.4",
-                                "is-negative-zero": "^2.0.2",
-                                "is-regex": "^1.1.4",
-                                "is-shared-array-buffer": "^1.0.2",
-                                "is-string": "^1.0.7",
-                                "is-weakref": "^1.0.2",
-                                "object-inspect": "^1.12.0",
-                                "object-keys": "^1.1.1",
-                                "object.assign": "^4.1.2",
-                                "regexp.prototype.flags": "^1.4.3",
-                                "string.prototype.trimend": "^1.0.5",
-                                "string.prototype.trimstart": "^1.0.5",
-                                "unbox-primitive": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "functions-have-names": {
-                              "version": "1.2.3",
-                              "name": "functions-have-names",
-                              "resolved": "https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz",
-                              "integrity": "sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "functions-have-names@1.2.3",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\functions-have-names",
-                              "_dependencies": {},
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "get-intrinsic": {
-                          "version": "1.1.2",
-                          "name": "get-intrinsic",
-                          "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                          "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "get-intrinsic@1.1.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
-                          "_dependencies": {
-                            "function-bind": "^1.1.1",
-                            "has": "^1.0.3",
-                            "has-symbols": "^1.0.3"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "get-symbol-description": {
-                          "version": "1.0.0",
-                          "resolved": "https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.0.0.tgz",
-                          "name": "get-symbol-description",
-                          "integrity": "sha512-2EmdH1YvIQiZpltCNgkuiUnyukzxM/R6NDJX31Ke3BG1Nq5b0S2PhX59UKi9vZpPDQVdqn+1IcaAwnzTT5vCjw==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "get-symbol-description@1.0.0",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-symbol-description",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "get-intrinsic": "^1.1.1"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "get-intrinsic": {
-                              "version": "1.1.2",
-                              "name": "get-intrinsic",
-                              "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                              "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "get-intrinsic@1.1.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "has": "^1.0.3",
-                                "has-symbols": "^1.0.3"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "has-property-descriptors": {
-                          "version": "1.0.0",
-                          "resolved": "https://registry.npmjs.org/has-property-descriptors/-/has-property-descriptors-1.0.0.tgz",
-                          "name": "has-property-descriptors",
-                          "integrity": "sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "has-property-descriptors@1.0.0",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\has-property-descriptors",
-                          "_dependencies": {
-                            "get-intrinsic": "^1.1.1"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "get-intrinsic": {
-                              "version": "1.1.2",
-                              "name": "get-intrinsic",
-                              "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                              "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "get-intrinsic@1.1.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "has": "^1.0.3",
-                                "has-symbols": "^1.0.3"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "has-symbols": {
-                          "version": "1.0.3",
-                          "name": "has-symbols",
-                          "resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tgz",
-                          "integrity": "sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "has-symbols@1.0.3",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\has-symbols",
-                          "_dependencies": {},
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "has": {
-                          "version": "1.0.3",
-                          "name": "has",
-                          "resolved": "https://registry.npmjs.org/has/-/has-1.0.3.tgz",
-                          "integrity": "sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==",
-                          "engines": {
-                            "node": ">= 0.4.0"
-                          },
-                          "_id": "has@1.0.3",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\has",
-                          "_dependencies": {
-                            "function-bind": "^1.1.1"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "internal-slot": {
-                          "version": "1.0.3",
-                          "resolved": "https://registry.npmjs.org/internal-slot/-/internal-slot-1.0.3.tgz",
-                          "name": "internal-slot",
-                          "integrity": "sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "_id": "internal-slot@1.0.3",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\internal-slot",
-                          "_dependencies": {
-                            "get-intrinsic": "^1.1.0",
-                            "has": "^1.0.3",
-                            "side-channel": "^1.0.4"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "get-intrinsic": {
-                              "version": "1.1.2",
-                              "name": "get-intrinsic",
-                              "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                              "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "get-intrinsic@1.1.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "has": "^1.0.3",
-                                "has-symbols": "^1.0.3"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "has": {
-                              "version": "1.0.3",
-                              "name": "has",
-                              "resolved": "https://registry.npmjs.org/has/-/has-1.0.3.tgz",
-                              "integrity": "sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==",
-                              "engines": {
-                                "node": ">= 0.4.0"
-                              },
-                              "_id": "has@1.0.3",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\has",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "side-channel": {
-                              "version": "1.0.4",
-                              "name": "side-channel",
-                              "resolved": "https://registry.npmjs.org/side-channel/-/side-channel-1.0.4.tgz",
-                              "integrity": "sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "side-channel@1.0.4",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\side-channel",
-                              "_dependencies": {
-                                "call-bind": "^1.0.0",
-                                "get-intrinsic": "^1.0.2",
-                                "object-inspect": "^1.9.0"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "is-callable": {
-                          "version": "1.2.4",
-                          "resolved": "https://registry.npmjs.org/is-callable/-/is-callable-1.2.4.tgz",
-                          "name": "is-callable",
-                          "integrity": "sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "is-callable@1.2.4",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-callable",
-                          "_dependencies": {},
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "is-negative-zero": {
-                          "version": "2.0.2",
-                          "resolved": "https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.2.tgz",
-                          "name": "is-negative-zero",
-                          "integrity": "sha512-dqJvarLawXsFbNDeJW7zAz8ItJ9cd28YufuuFzh0G8pNHjJMnY08Dv7sYX2uF5UpQOwieAeOExEYAWWfu7ZZUA==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "is-negative-zero@2.0.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-negative-zero",
-                          "_dependencies": {},
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "is-regex": {
-                          "version": "1.1.4",
-                          "name": "is-regex",
-                          "resolved": "https://registry.npmjs.org/is-regex/-/is-regex-1.1.4.tgz",
-                          "integrity": "sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "is-regex@1.1.4",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-regex",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "has-tostringtag": "^1.0.0"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "is-shared-array-buffer": {
-                          "version": "1.0.2",
-                          "resolved": "https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.2.tgz",
-                          "name": "is-shared-array-buffer",
-                          "integrity": "sha512-sqN2UDu1/0y6uvXyStCOzyhAjCSlHceFoMKJW8W9EU9cvic/QdsZ0kEU93HEy3IUEFZIiH/3w+AH/UQbPHNdhA==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "is-shared-array-buffer@1.0.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-shared-array-buffer",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "is-string": {
-                          "version": "1.0.7",
-                          "name": "is-string",
-                          "resolved": "https://registry.npmjs.org/is-string/-/is-string-1.0.7.tgz",
-                          "integrity": "sha512-tE2UXzivje6ofPW7l23cjDOMa09gb7xlAqG6jG5ej6uPV32TlWP3NKPigtaGeHNu9fohccRYvIiZMfOOnOYUtg==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "is-string@1.0.7",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-string",
-                          "_dependencies": {
-                            "has-tostringtag": "^1.0.0"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "is-weakref": {
-                          "version": "1.0.2",
-                          "resolved": "https://registry.npmjs.org/is-weakref/-/is-weakref-1.0.2.tgz",
-                          "name": "is-weakref",
-                          "integrity": "sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "is-weakref@1.0.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-weakref",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "object-inspect": {
-                          "version": "1.12.2",
-                          "name": "object-inspect",
-                          "resolved": "https://registry.npmjs.org/object-inspect/-/object-inspect-1.12.2.tgz",
-                          "integrity": "sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "object-inspect@1.12.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\object-inspect",
-                          "_dependencies": {},
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "object-keys": {
-                          "version": "1.1.1",
-                          "name": "object-keys",
-                          "resolved": "https://registry.npmjs.org/object-keys/-/object-keys-1.1.1.tgz",
-                          "integrity": "sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "_id": "object-keys@1.1.1",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\object-keys",
-                          "_dependencies": {},
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "object.assign": {
-                          "version": "4.1.4",
-                          "name": "object.assign",
-                          "resolved": "https://registry.npmjs.org/object.assign/-/object.assign-4.1.4.tgz",
-                          "integrity": "sha512-1mxKf0e58bvyjSCtKYY4sRe9itRk3PJpquJOjeIkz885CczcI4IvJJDLPS72oowuSh+pBxUFROpX+TU++hxhZQ==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "object.assign@4.1.4",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\object.assign",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "define-properties": "^1.1.4",
-                            "has-symbols": "^1.0.3",
-                            "object-keys": "^1.1.1"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "regexp.prototype.flags": {
-                          "version": "1.4.3",
-                          "name": "regexp.prototype.flags",
-                          "resolved": "https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz",
-                          "integrity": "sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==",
-                          "engines": {
-                            "node": ">= 0.4"
-                          },
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "regexp.prototype.flags@1.4.3",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\regexp.prototype.flags",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "define-properties": "^1.1.3",
-                            "functions-have-names": "^1.2.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {}
-                        },
-                        "string.prototype.trimend": {
-                          "version": "1.0.5",
-                          "resolved": "https://registry.npmjs.org/string.prototype.trimend/-/string.prototype.trimend-1.0.5.tgz",
-                          "name": "string.prototype.trimend",
-                          "integrity": "sha512-I7RGvmjV4pJ7O3kdf+LXFpVfdNOxtCW/2C8f6jNiW4+PQchwxkCDzlk1/7p+Wl4bqFIZeF47qAHXLuHHWKAxog==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "string.prototype.trimend@1.0.5",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\string.prototype.trimend",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "define-properties": "^1.1.4",
-                            "es-abstract": "^1.19.5"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "define-properties": {
-                              "version": "1.1.4",
-                              "name": "define-properties",
-                              "resolved": "https://registry.npmjs.org/define-properties/-/define-properties-1.1.4.tgz",
-                              "integrity": "sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "define-properties@1.1.4",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\define-properties",
-                              "_dependencies": {
-                                "has-property-descriptors": "^1.0.0",
-                                "object-keys": "^1.1.1"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "es-abstract": {
-                              "version": "1.20.1",
-                              "name": "es-abstract",
-                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.1.tgz",
-                              "integrity": "sha512-WEm2oBhfoI2sImeM4OF2zE2V3BYdSF+KnSi9Sidz51fQHd7+JuF8Xgcj9/0o+OWeIeIS/MiuNnlruQrJf16GQA==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "es-abstract@1.20.1",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\es-abstract",
-                              "_dependencies": {
-                                "call-bind": "^1.0.2",
-                                "es-to-primitive": "^1.2.1",
-                                "function-bind": "^1.1.1",
-                                "function.prototype.name": "^1.1.5",
-                                "get-intrinsic": "^1.1.1",
-                                "get-symbol-description": "^1.0.0",
-                                "has": "^1.0.3",
-                                "has-property-descriptors": "^1.0.0",
-                                "has-symbols": "^1.0.3",
-                                "internal-slot": "^1.0.3",
-                                "is-callable": "^1.2.4",
-                                "is-negative-zero": "^2.0.2",
-                                "is-regex": "^1.1.4",
-                                "is-shared-array-buffer": "^1.0.2",
-                                "is-string": "^1.0.7",
-                                "is-weakref": "^1.0.2",
-                                "object-inspect": "^1.12.0",
-                                "object-keys": "^1.1.1",
-                                "object.assign": "^4.1.2",
-                                "regexp.prototype.flags": "^1.4.3",
-                                "string.prototype.trimend": "^1.0.5",
-                                "string.prototype.trimstart": "^1.0.5",
-                                "unbox-primitive": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "string.prototype.trimstart": {
-                          "version": "1.0.5",
-                          "resolved": "https://registry.npmjs.org/string.prototype.trimstart/-/string.prototype.trimstart-1.0.5.tgz",
-                          "name": "string.prototype.trimstart",
-                          "integrity": "sha512-THx16TJCGlsN0o6dl2o6ncWUsdgnLRSA23rRE5pyGBw/mLr3Ej/R2LaqCtgP8VNMGZsvMWnf9ooZPyY2bHvUFg==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "string.prototype.trimstart@1.0.5",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\string.prototype.trimstart",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "define-properties": "^1.1.4",
-                            "es-abstract": "^1.19.5"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "define-properties": {
-                              "version": "1.1.4",
-                              "name": "define-properties",
-                              "resolved": "https://registry.npmjs.org/define-properties/-/define-properties-1.1.4.tgz",
-                              "integrity": "sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "define-properties@1.1.4",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\define-properties",
-                              "_dependencies": {
-                                "has-property-descriptors": "^1.0.0",
-                                "object-keys": "^1.1.1"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "es-abstract": {
-                              "version": "1.20.1",
-                              "name": "es-abstract",
-                              "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.1.tgz",
-                              "integrity": "sha512-WEm2oBhfoI2sImeM4OF2zE2V3BYdSF+KnSi9Sidz51fQHd7+JuF8Xgcj9/0o+OWeIeIS/MiuNnlruQrJf16GQA==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "es-abstract@1.20.1",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\es-abstract",
-                              "_dependencies": {
-                                "call-bind": "^1.0.2",
-                                "es-to-primitive": "^1.2.1",
-                                "function-bind": "^1.1.1",
-                                "function.prototype.name": "^1.1.5",
-                                "get-intrinsic": "^1.1.1",
-                                "get-symbol-description": "^1.0.0",
-                                "has": "^1.0.3",
-                                "has-property-descriptors": "^1.0.0",
-                                "has-symbols": "^1.0.3",
-                                "internal-slot": "^1.0.3",
-                                "is-callable": "^1.2.4",
-                                "is-negative-zero": "^2.0.2",
-                                "is-regex": "^1.1.4",
-                                "is-shared-array-buffer": "^1.0.2",
-                                "is-string": "^1.0.7",
-                                "is-weakref": "^1.0.2",
-                                "object-inspect": "^1.12.0",
-                                "object-keys": "^1.1.1",
-                                "object.assign": "^4.1.2",
-                                "regexp.prototype.flags": "^1.4.3",
-                                "string.prototype.trimend": "^1.0.5",
-                                "string.prototype.trimstart": "^1.0.5",
-                                "unbox-primitive": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        },
-                        "unbox-primitive": {
-                          "version": "1.0.2",
-                          "resolved": "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz",
-                          "name": "unbox-primitive",
-                          "integrity": "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==",
-                          "funding": {
-                            "url": "https://github.com/sponsors/ljharb"
-                          },
-                          "_id": "unbox-primitive@1.0.2",
-                          "extraneous": false,
-                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\unbox-primitive",
-                          "_dependencies": {
-                            "call-bind": "^1.0.2",
-                            "has-bigints": "^1.0.2",
-                            "has-symbols": "^1.0.3",
-                            "which-boxed-primitive": "^1.0.2"
-                          },
-                          "devDependencies": {},
-                          "peerDependencies": {},
-                          "dependencies": {
-                            "call-bind": {
-                              "version": "1.0.2",
-                              "name": "call-bind",
-                              "resolved": "https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz",
-                              "integrity": "sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "call-bind@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\call-bind",
-                              "_dependencies": {
-                                "function-bind": "^1.1.1",
-                                "get-intrinsic": "^1.0.2"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "has-bigints": {
-                              "version": "1.0.2",
-                              "name": "has-bigints",
-                              "resolved": "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.2.tgz",
-                              "integrity": "sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "has-bigints@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\has-bigints",
-                              "_dependencies": {},
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "has-symbols": {
-                              "version": "1.0.3",
-                              "name": "has-symbols",
-                              "resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tgz",
-                              "integrity": "sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==",
-                              "engines": {
-                                "node": ">= 0.4"
-                              },
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "has-symbols@1.0.3",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\has-symbols",
-                              "_dependencies": {},
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            },
-                            "which-boxed-primitive": {
-                              "version": "1.0.2",
-                              "name": "which-boxed-primitive",
-                              "resolved": "https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz",
-                              "integrity": "sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==",
-                              "funding": {
-                                "url": "https://github.com/sponsors/ljharb"
-                              },
-                              "_id": "which-boxed-primitive@1.0.2",
-                              "extraneous": false,
-                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\which-boxed-primitive",
-                              "_dependencies": {
-                                "is-bigint": "^1.0.1",
-                                "is-boolean-object": "^1.1.0",
-                                "is-number-object": "^1.0.4",
-                                "is-string": "^1.0.5",
-                                "is-symbol": "^1.0.3"
-                              },
-                              "devDependencies": {},
-                              "peerDependencies": {}
-                            }
-                          }
-                        }
-                      }
-                    },
                     "for-each": {
                       "version": "0.3.3",
                       "resolved": "https://registry.npmjs.org/for-each/-/for-each-0.3.3.tgz",
@@ -11401,20 +10377,58 @@
                       "peerDependencies": {},
                       "dependencies": {
                         "is-callable": {
-                          "version": "1.2.4",
+                          "version": "1.2.7",
+                          "resolved": "https://registry.npmjs.org/is-callable/-/is-callable-1.2.7.tgz",
                           "name": "is-callable",
-                          "resolved": "https://registry.npmjs.org/is-callable/-/is-callable-1.2.4.tgz",
-                          "integrity": "sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w==",
+                          "integrity": "sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==",
                           "engines": {
                             "node": ">= 0.4"
                           },
                           "funding": {
                             "url": "https://github.com/sponsors/ljharb"
                           },
-                          "_id": "is-callable@1.2.4",
+                          "_id": "is-callable@1.2.7",
                           "extraneous": false,
                           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-callable",
                           "_dependencies": {},
+                          "devDependencies": {},
+                          "peerDependencies": {}
+                        }
+                      }
+                    },
+                    "gopd": {
+                      "version": "1.0.1",
+                      "resolved": "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz",
+                      "name": "gopd",
+                      "integrity": "sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==",
+                      "funding": {
+                        "url": "https://github.com/sponsors/ljharb"
+                      },
+                      "_id": "gopd@1.0.1",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\gopd",
+                      "_dependencies": {
+                        "get-intrinsic": "^1.1.3"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {},
+                      "dependencies": {
+                        "get-intrinsic": {
+                          "version": "1.1.3",
+                          "name": "get-intrinsic",
+                          "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
+                          "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
+                          "funding": {
+                            "url": "https://github.com/sponsors/ljharb"
+                          },
+                          "_id": "get-intrinsic@1.1.3",
+                          "extraneous": false,
+                          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
+                          "_dependencies": {
+                            "function-bind": "^1.1.1",
+                            "has": "^1.0.3",
+                            "has-symbols": "^1.0.3"
+                          },
                           "devDependencies": {},
                           "peerDependencies": {}
                         }
@@ -11442,39 +10456,27 @@
                     }
                   }
                 },
-                "safe-buffer": {
-                  "version": "5.1.2",
-                  "name": "safe-buffer",
-                  "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
-                  "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
-                  "_id": "safe-buffer@5.1.2",
-                  "extraneous": false,
-                  "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\safe-buffer",
-                  "_dependencies": {},
-                  "devDependencies": {},
-                  "peerDependencies": {}
-                },
                 "which-typed-array": {
-                  "version": "1.1.8",
-                  "resolved": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.8.tgz",
+                  "version": "1.1.9",
+                  "resolved": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.9.tgz",
                   "name": "which-typed-array",
-                  "integrity": "sha512-Jn4e5PItbcAHyLoRDwvPj1ypu27DJbtdYXUa5zsinrUx77Uvfb0cXwwnGMTn7cjUfhhqgVQnVJCwF+7cgU7tpw==",
+                  "integrity": "sha512-w9c4xkx6mPidwp7180ckYWfMmvxpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA==",
                   "engines": {
                     "node": ">= 0.4"
                   },
                   "funding": {
                     "url": "https://github.com/sponsors/ljharb"
                   },
-                  "_id": "which-typed-array@1.1.8",
+                  "_id": "which-typed-array@1.1.9",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\which-typed-array",
                   "_dependencies": {
                     "available-typed-arrays": "^1.0.5",
                     "call-bind": "^1.0.2",
-                    "es-abstract": "^1.20.0",
                     "for-each": "^0.3.3",
+                    "gopd": "^1.0.1",
                     "has-tostringtag": "^1.0.0",
-                    "is-typed-array": "^1.1.9"
+                    "is-typed-array": "^1.1.10"
                   },
                   "devDependencies": {},
                   "peerDependencies": {},
@@ -11515,48 +10517,6 @@
                       "devDependencies": {},
                       "peerDependencies": {}
                     },
-                    "es-abstract": {
-                      "version": "1.20.1",
-                      "name": "es-abstract",
-                      "resolved": "https://registry.npmjs.org/es-abstract/-/es-abstract-1.20.1.tgz",
-                      "integrity": "sha512-WEm2oBhfoI2sImeM4OF2zE2V3BYdSF+KnSi9Sidz51fQHd7+JuF8Xgcj9/0o+OWeIeIS/MiuNnlruQrJf16GQA==",
-                      "engines": {
-                        "node": ">= 0.4"
-                      },
-                      "funding": {
-                        "url": "https://github.com/sponsors/ljharb"
-                      },
-                      "_id": "es-abstract@1.20.1",
-                      "extraneous": false,
-                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\es-abstract",
-                      "_dependencies": {
-                        "call-bind": "^1.0.2",
-                        "es-to-primitive": "^1.2.1",
-                        "function-bind": "^1.1.1",
-                        "function.prototype.name": "^1.1.5",
-                        "get-intrinsic": "^1.1.1",
-                        "get-symbol-description": "^1.0.0",
-                        "has": "^1.0.3",
-                        "has-property-descriptors": "^1.0.0",
-                        "has-symbols": "^1.0.3",
-                        "internal-slot": "^1.0.3",
-                        "is-callable": "^1.2.4",
-                        "is-negative-zero": "^2.0.2",
-                        "is-regex": "^1.1.4",
-                        "is-shared-array-buffer": "^1.0.2",
-                        "is-string": "^1.0.7",
-                        "is-weakref": "^1.0.2",
-                        "object-inspect": "^1.12.0",
-                        "object-keys": "^1.1.1",
-                        "object.assign": "^4.1.2",
-                        "regexp.prototype.flags": "^1.4.3",
-                        "string.prototype.trimend": "^1.0.5",
-                        "string.prototype.trimstart": "^1.0.5",
-                        "unbox-primitive": "^1.0.2"
-                      },
-                      "devDependencies": {},
-                      "peerDependencies": {}
-                    },
                     "for-each": {
                       "version": "0.3.3",
                       "name": "for-each",
@@ -11567,6 +10527,23 @@
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\for-each",
                       "_dependencies": {
                         "is-callable": "^1.1.3"
+                      },
+                      "devDependencies": {},
+                      "peerDependencies": {}
+                    },
+                    "gopd": {
+                      "version": "1.0.1",
+                      "name": "gopd",
+                      "resolved": "https://registry.npmjs.org/gopd/-/gopd-1.0.1.tgz",
+                      "integrity": "sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==",
+                      "funding": {
+                        "url": "https://github.com/sponsors/ljharb"
+                      },
+                      "_id": "gopd@1.0.1",
+                      "extraneous": false,
+                      "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\gopd",
+                      "_dependencies": {
+                        "get-intrinsic": "^1.1.3"
                       },
                       "devDependencies": {},
                       "peerDependencies": {}
@@ -11592,24 +10569,24 @@
                       "peerDependencies": {}
                     },
                     "is-typed-array": {
-                      "version": "1.1.9",
+                      "version": "1.1.10",
                       "name": "is-typed-array",
-                      "resolved": "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.9.tgz",
-                      "integrity": "sha512-kfrlnTTn8pZkfpJMUgYD7YZ3qzeJgWUn8XfVYBARc4wnmNOmLbmuuaAs3q5fvB0UJOn6yHAKaGTPM7d6ezoD/A==",
+                      "resolved": "https://registry.npmjs.org/is-typed-array/-/is-typed-array-1.1.10.tgz",
+                      "integrity": "sha512-PJqgEHiWZvMpaFZ3uTc8kHPM4+4ADTlDniuQL7cU/UDA0Ql7F70yGfHph3cLNe+c9toaigv+DFzTJKhc2CtO6A==",
                       "engines": {
                         "node": ">= 0.4"
                       },
                       "funding": {
                         "url": "https://github.com/sponsors/ljharb"
                       },
-                      "_id": "is-typed-array@1.1.9",
+                      "_id": "is-typed-array@1.1.10",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-typed-array",
                       "_dependencies": {
                         "available-typed-arrays": "^1.0.5",
                         "call-bind": "^1.0.2",
-                        "es-abstract": "^1.20.0",
                         "for-each": "^0.3.3",
+                        "gopd": "^1.0.1",
                         "has-tostringtag": "^1.0.0"
                       },
                       "devDependencies": {},
@@ -11624,18 +10601,18 @@
       }
     },
     "finale-rest": {
-      "version": "1.1.1",
-      "resolved": "https://registry.npmjs.org/finale-rest/-/finale-rest-1.1.1.tgz",
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/finale-rest/-/finale-rest-1.2.0.tgz",
       "name": "finale-rest",
-      "integrity": "sha512-TYjhq+2x6rz/pxdr6kQycC1ih9AUI/jhcCJwAfHiWniTjRwbA+FBvGtjKyXI9PPY/F46VFWxycDcYcPeSWXLcg==",
-      "_id": "finale-rest@1.1.1",
+      "integrity": "sha512-HE9mOSSo9g3bfPud/RM3HbPQM8A8foQ09grP8cLMW5YfB6fS3bv2v2O44smRm6ZxLC+ij3zYmzY8z+QyORDyQQ==",
+      "_id": "finale-rest@1.2.0",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\finale-rest",
       "_dependencies": {
-        "bluebird": "^3.0.0",
-        "inflection": "^1.7.1",
-        "lodash": "^4.17.15",
-        "moment": "^2.19.3"
+        "bluebird": "^3.7.2",
+        "inflection": "^1.13.4",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.4"
       },
       "devDependencies": {},
       "peerDependencies": {},
@@ -11653,14 +10630,14 @@
           "peerDependencies": {}
         },
         "inflection": {
-          "version": "1.13.2",
-          "resolved": "https://registry.npmjs.org/inflection/-/inflection-1.13.2.tgz",
+          "version": "1.13.4",
+          "resolved": "https://registry.npmjs.org/inflection/-/inflection-1.13.4.tgz",
           "name": "inflection",
-          "integrity": "sha512-cmZlljCRTBFouT8UzMzrGcVEvkv6D/wBdcdKG7J1QH5cXjtU75Dm+P27v9EKu/Y43UYyCJd1WC4zLebRrC8NBw==",
+          "integrity": "sha512-6I/HUDeYFfuNCVS3td055BaXBwKYuzw7K3ExVMStBowKo9oOAMJIXIHvdyR3iboTCp1b+1i5DSkIZTcwIktuDw==",
           "engines": [
             "node >= 0.4.0"
           ],
-          "_id": "inflection@1.13.2",
+          "_id": "inflection@1.13.4",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\inflection",
           "_dependencies": {},
@@ -12998,12 +11975,12 @@
               "peerDependencies": {}
             },
             "nan": {
-              "version": "2.16.0",
-              "resolved": "https://registry.npmjs.org/nan/-/nan-2.16.0.tgz",
+              "version": "2.17.0",
+              "resolved": "https://registry.npmjs.org/nan/-/nan-2.17.0.tgz",
               "name": "nan",
-              "integrity": "sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==",
+              "integrity": "sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==",
               "optional": true,
-              "_id": "nan@2.16.0",
+              "_id": "nan@2.17.0",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\nan",
               "_dependencies": {},
@@ -13110,11 +12087,14 @@
                   "peerDependencies": {}
                 },
                 "minimist": {
-                  "version": "1.2.6",
+                  "version": "1.2.7",
                   "name": "minimist",
-                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-                  "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-                  "_id": "minimist@1.2.6",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+                  "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+                  "funding": {
+                    "url": "https://github.com/sponsors/ljharb"
+                  },
+                  "_id": "minimist@1.2.7",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
                   "_dependencies": {},
@@ -15589,11 +14569,14 @@
           "peerDependencies": {},
           "dependencies": {
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
               "_dependencies": {},
@@ -15628,10 +14611,10 @@
               "peerDependencies": {}
             },
             "uglify-js": {
-              "version": "3.17.0",
-              "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.0.tgz",
+              "version": "3.17.4",
+              "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.17.4.tgz",
               "name": "uglify-js",
-              "integrity": "sha512-aTeNPVmgIMPpm1cxXr2Q/nEbvkmV8yq66F3om7X3P/cvOXQ0TMQ64Wk63iyT1gPlmdmGzjGpyLh1f3y8MZWXGg==",
+              "integrity": "sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==",
               "optional": true,
               "bin": {
                 "uglifyjs": "bin/uglifyjs"
@@ -15639,7 +14622,7 @@
               "engines": {
                 "node": ">=0.8.0"
               },
-              "_id": "uglify-js@3.17.0",
+              "_id": "uglify-js@3.17.4",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\uglify-js",
               "_dependencies": {},
@@ -15821,11 +14804,14 @@
               "peerDependencies": {},
               "dependencies": {
                 "minimist": {
-                  "version": "1.2.6",
+                  "version": "1.2.7",
                   "name": "minimist",
-                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-                  "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-                  "_id": "minimist@1.2.6",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+                  "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+                  "funding": {
+                    "url": "https://github.com/sponsors/ljharb"
+                  },
+                  "_id": "minimist@1.2.7",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
                   "_dependencies": {},
@@ -16083,14 +15069,14 @@
       }
     },
     "jssha": {
-      "version": "3.2.0",
-      "resolved": "https://registry.npmjs.org/jssha/-/jssha-3.2.0.tgz",
+      "version": "3.3.0",
+      "resolved": "https://registry.npmjs.org/jssha/-/jssha-3.3.0.tgz",
       "name": "jssha",
-      "integrity": "sha512-QuruyBENDWdN4tZwJbQq7/eAK85FqrI4oDbXjy5IBhYD+2pTJyBUWZe8ctWaCkrV0gy6AaelgOZZBMeswEa/6Q==",
+      "integrity": "sha512-w9OtT4ALL+fbbwG3gw7erAO0jvS5nfvrukGPMWIAoea359B26ALXGpzy4YJSp9yGnpUvuvOw1nSjSoHDfWSr1w==",
       "engines": {
         "node": "*"
       },
-      "_id": "jssha@3.2.0",
+      "_id": "jssha@3.3.0",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\jssha",
       "_dependencies": {},
@@ -16098,11 +15084,11 @@
       "peerDependencies": {}
     },
     "juicy-chat-bot": {
-      "version": "0.6.5",
-      "resolved": "https://registry.npmjs.org/juicy-chat-bot/-/juicy-chat-bot-0.6.5.tgz",
+      "version": "0.6.6",
+      "resolved": "https://registry.npmjs.org/juicy-chat-bot/-/juicy-chat-bot-0.6.6.tgz",
       "name": "juicy-chat-bot",
-      "integrity": "sha512-KhIxJblsjz0zYvCZFNX3yfJbsVwLZoxLNUd6jLgg/y1SDh7vuueIT9IdxCKf7nzACJbnalzDlUhE4E8/cphBAw==",
-      "_id": "juicy-chat-bot@0.6.5",
+      "integrity": "sha512-X5+uayv+pG7VFIIJo9CCO3ir33xx7YoA6EM66N0wXjin3Ef51kK3iJOTv1ZVwXBz+zDsgMq8nnMeKRsoCnQhvw==",
+      "_id": "juicy-chat-bot@0.6.6",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\juicy-chat-bot",
       "_dependencies": {
@@ -16114,7 +15100,7 @@
         "@nlpjs/nlu": "^4.4.0",
         "@nlpjs/request": "^4.4.0",
         "@nlpjs/sentiment": "^4.4.0",
-        "vm2": "3.9.3"
+        "vm2": "3.9.11"
       },
       "devDependencies": {},
       "peerDependencies": {},
@@ -18273,22 +17259,60 @@
           }
         },
         "vm2": {
-          "version": "3.9.3",
-          "resolved": "https://registry.npmjs.org/vm2/-/vm2-3.9.3.tgz",
+          "version": "3.9.11",
+          "resolved": "https://registry.npmjs.org/vm2/-/vm2-3.9.11.tgz",
           "name": "vm2",
-          "integrity": "sha512-smLS+18RjXYMl9joyJxMNI9l4w7biW8ilSDaVRvFBDwOH8P0BK1ognFQTpg0wyQ6wIKLTblHJvROW692L/E53Q==",
+          "integrity": "sha512-PFG8iJRSjvvBdisowQ7iVF580DXb1uCIiGaXgm7tynMR1uTBlv7UJlB1zdv5KJ+Tmq1f0Upnj3fayoEOPpCBKg==",
           "bin": {
             "vm2": "bin/vm2"
           },
           "engines": {
             "node": ">=6.0"
           },
-          "_id": "vm2@3.9.3",
+          "_id": "vm2@3.9.11",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\vm2",
-          "_dependencies": {},
+          "_dependencies": {
+            "acorn": "^8.7.0",
+            "acorn-walk": "^8.2.0"
+          },
           "devDependencies": {},
-          "peerDependencies": {}
+          "peerDependencies": {},
+          "dependencies": {
+            "acorn-walk": {
+              "version": "8.2.0",
+              "resolved": "https://registry.npmjs.org/acorn-walk/-/acorn-walk-8.2.0.tgz",
+              "name": "acorn-walk",
+              "integrity": "sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==",
+              "engines": {
+                "node": ">=0.4.0"
+              },
+              "_id": "acorn-walk@8.2.0",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\acorn-walk",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            },
+            "acorn": {
+              "version": "8.8.1",
+              "resolved": "https://registry.npmjs.org/acorn/-/acorn-8.8.1.tgz",
+              "name": "acorn",
+              "integrity": "sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==",
+              "bin": {
+                "acorn": "bin/acorn"
+              },
+              "engines": {
+                "node": ">=0.4.0"
+              },
+              "_id": "acorn@8.8.1",
+              "extraneous": false,
+              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\vm2\\node_modules\\acorn",
+              "_dependencies": {},
+              "devDependencies": {},
+              "peerDependencies": {}
+            }
+          }
         }
       }
     },
@@ -18313,14 +17337,14 @@
       "peerDependencies": {},
       "dependencies": {
         "@mapbox/node-pre-gyp": {
-          "version": "1.0.9",
-          "resolved": "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.9.tgz",
+          "version": "1.0.10",
+          "resolved": "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.10.tgz",
           "name": "@mapbox/node-pre-gyp",
-          "integrity": "sha512-aDF3S3rK9Q2gey/WAttUlISduDItz5BU3306M9Eyv6/oS40aMprnopshtlKTykxRNIBEZuRMaZAnbrQ4QtKGyw==",
+          "integrity": "sha512-4ySo4CjzStuprMwk35H5pPbkymjv1SF3jGLj6rAHp/xT/RF7TL7bd9CTm1xDY49K2qF7jmR/g7k+SkLETP6opA==",
           "bin": {
             "node-pre-gyp": "bin/node-pre-gyp"
           },
-          "_id": "@mapbox/node-pre-gyp@1.0.9",
+          "_id": "@mapbox/node-pre-gyp@1.0.10",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@mapbox\\node-pre-gyp",
           "_dependencies": {
@@ -18930,17 +17954,17 @@
               "peerDependencies": {}
             },
             "semver": {
-              "version": "7.3.7",
+              "version": "7.3.8",
               "name": "semver",
-              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-              "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+              "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
               "bin": {
                 "semver": "bin/semver.js"
               },
               "engines": {
                 "node": ">=10"
               },
-              "_id": "semver@7.3.7",
+              "_id": "semver@7.3.8",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\semver",
               "_dependencies": {
@@ -18950,14 +17974,14 @@
               "peerDependencies": {}
             },
             "tar": {
-              "version": "6.1.11",
+              "version": "6.1.12",
               "name": "tar",
-              "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.11.tgz",
-              "integrity": "sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==",
+              "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.12.tgz",
+              "integrity": "sha512-jU4TdemS31uABHd+Lt5WEYJuzn+TJTCBLljvIAHZOz6M9Os5pJ4dD+vRFLxPa/n3T0iEFzpi+0x1UfuDZYbRMw==",
               "engines": {
-                "node": ">= 10"
+                "node": ">=10"
               },
-              "_id": "tar@6.1.11",
+              "_id": "tar@6.1.12",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\tar",
               "_dependencies": {
@@ -19594,11 +18618,14 @@
           "peerDependencies": {},
           "dependencies": {
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
               "_dependencies": {},
@@ -19737,11 +18764,14 @@
           "peerDependencies": {},
           "dependencies": {
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
               "_dependencies": {},
@@ -20377,11 +19407,14 @@
               "peerDependencies": {}
             },
             "minimist": {
-              "version": "1.2.6",
+              "version": "1.2.7",
               "name": "minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-              "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-              "_id": "minimist@1.2.6",
+              "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+              "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+              "funding": {
+                "url": "https://github.com/sponsors/ljharb"
+              },
+              "_id": "minimist@1.2.7",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
               "_dependencies": {},
@@ -21012,11 +20045,11 @@
               "peerDependencies": {},
               "dependencies": {
                 "tslib": {
-                  "version": "2.4.0",
-                  "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz",
+                  "version": "2.4.1",
+                  "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.4.1.tgz",
                   "name": "tslib",
-                  "integrity": "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==",
-                  "_id": "tslib@2.4.0",
+                  "integrity": "sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==",
+                  "_id": "tslib@2.4.1",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\tslib",
                   "_dependencies": {},
@@ -21083,32 +20116,32 @@
               "peerDependencies": {}
             },
             "deep-equal": {
-              "version": "2.0.5",
-              "resolved": "https://registry.npmjs.org/deep-equal/-/deep-equal-2.0.5.tgz",
+              "version": "2.1.0",
+              "resolved": "https://registry.npmjs.org/deep-equal/-/deep-equal-2.1.0.tgz",
               "name": "deep-equal",
-              "integrity": "sha512-nPiRgmbAtm1a3JsnLCf6/SLfXcjyN5v8L1TXzdCmHrXJ4hx+gW/w1YCcn7z8gJtSiDArZCgYtbao3QqLm/N1Sw==",
+              "integrity": "sha512-2pxgvWu3Alv1PoWEyVg7HS8YhGlUFUV7N5oOvfL6d+7xAmLSemMwv/c8Zv/i9KFzxV5Kt5CAvQc70fLwVuf4UA==",
               "funding": {
                 "url": "https://github.com/sponsors/ljharb"
               },
-              "_id": "deep-equal@2.0.5",
+              "_id": "deep-equal@2.1.0",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\deep-equal",
               "_dependencies": {
-                "call-bind": "^1.0.0",
-                "es-get-iterator": "^1.1.1",
-                "get-intrinsic": "^1.0.1",
-                "is-arguments": "^1.0.4",
-                "is-date-object": "^1.0.2",
-                "is-regex": "^1.1.1",
+                "call-bind": "^1.0.2",
+                "es-get-iterator": "^1.1.2",
+                "get-intrinsic": "^1.1.3",
+                "is-arguments": "^1.1.1",
+                "is-date-object": "^1.0.5",
+                "is-regex": "^1.1.4",
                 "isarray": "^2.0.5",
-                "object-is": "^1.1.4",
+                "object-is": "^1.1.5",
                 "object-keys": "^1.1.1",
-                "object.assign": "^4.1.2",
-                "regexp.prototype.flags": "^1.3.0",
-                "side-channel": "^1.0.3",
-                "which-boxed-primitive": "^1.0.1",
+                "object.assign": "^4.1.4",
+                "regexp.prototype.flags": "^1.4.3",
+                "side-channel": "^1.0.4",
+                "which-boxed-primitive": "^1.0.2",
                 "which-collection": "^1.0.1",
-                "which-typed-array": "^1.1.2"
+                "which-typed-array": "^1.1.8"
               },
               "devDependencies": {},
               "peerDependencies": {},
@@ -21174,14 +20207,14 @@
                       "peerDependencies": {}
                     },
                     "get-intrinsic": {
-                      "version": "1.1.2",
+                      "version": "1.1.3",
                       "name": "get-intrinsic",
-                      "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                      "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
+                      "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
+                      "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
                       "funding": {
                         "url": "https://github.com/sponsors/ljharb"
                       },
-                      "_id": "get-intrinsic@1.1.2",
+                      "_id": "get-intrinsic@1.1.3",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
                       "_dependencies": {
@@ -21318,14 +20351,14 @@
                   }
                 },
                 "get-intrinsic": {
-                  "version": "1.1.2",
+                  "version": "1.1.3",
                   "name": "get-intrinsic",
-                  "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                  "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
+                  "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
+                  "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
                   "funding": {
                     "url": "https://github.com/sponsors/ljharb"
                   },
-                  "_id": "get-intrinsic@1.1.2",
+                  "_id": "get-intrinsic@1.1.3",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
                   "_dependencies": {
@@ -21534,8 +20567,8 @@
                       "dependencies": {
                         "has-property-descriptors": {
                           "version": "1.0.0",
-                          "name": "has-property-descriptors",
                           "resolved": "https://registry.npmjs.org/has-property-descriptors/-/has-property-descriptors-1.0.0.tgz",
+                          "name": "has-property-descriptors",
                           "integrity": "sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==",
                           "funding": {
                             "url": "https://github.com/sponsors/ljharb"
@@ -21547,7 +20580,28 @@
                             "get-intrinsic": "^1.1.1"
                           },
                           "devDependencies": {},
-                          "peerDependencies": {}
+                          "peerDependencies": {},
+                          "dependencies": {
+                            "get-intrinsic": {
+                              "version": "1.1.3",
+                              "name": "get-intrinsic",
+                              "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
+                              "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
+                              "funding": {
+                                "url": "https://github.com/sponsors/ljharb"
+                              },
+                              "_id": "get-intrinsic@1.1.3",
+                              "extraneous": false,
+                              "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
+                              "_dependencies": {
+                                "function-bind": "^1.1.1",
+                                "has": "^1.0.3",
+                                "has-symbols": "^1.0.3"
+                              },
+                              "devDependencies": {},
+                              "peerDependencies": {}
+                            }
+                          }
                         },
                         "object-keys": {
                           "version": "1.1.1",
@@ -22099,14 +21153,14 @@
                           "peerDependencies": {}
                         },
                         "get-intrinsic": {
-                          "version": "1.1.2",
+                          "version": "1.1.3",
                           "name": "get-intrinsic",
-                          "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.2.tgz",
-                          "integrity": "sha512-Jfm3OyCxHh9DJyc28qGk+JmfkpO41A4XkneDSujN9MDXrm4oDKdHvndhZ2dN94+ERNfkYJWDclW6k2L/ZGHjXA==",
+                          "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.3.tgz",
+                          "integrity": "sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==",
                           "funding": {
                             "url": "https://github.com/sponsors/ljharb"
                           },
-                          "_id": "get-intrinsic@1.1.2",
+                          "_id": "get-intrinsic@1.1.3",
                           "extraneous": false,
                           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\get-intrinsic",
                           "_dependencies": {
@@ -22122,26 +21176,26 @@
                   }
                 },
                 "which-typed-array": {
-                  "version": "1.1.8",
+                  "version": "1.1.9",
                   "name": "which-typed-array",
-                  "resolved": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.8.tgz",
-                  "integrity": "sha512-Jn4e5PItbcAHyLoRDwvPj1ypu27DJbtdYXUa5zsinrUx77Uvfb0cXwwnGMTn7cjUfhhqgVQnVJCwF+7cgU7tpw==",
+                  "resolved": "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.9.tgz",
+                  "integrity": "sha512-w9c4xkx6mPidwp7180ckYWfMmvxpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA==",
                   "engines": {
                     "node": ">= 0.4"
                   },
                   "funding": {
                     "url": "https://github.com/sponsors/ljharb"
                   },
-                  "_id": "which-typed-array@1.1.8",
+                  "_id": "which-typed-array@1.1.9",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\which-typed-array",
                   "_dependencies": {
                     "available-typed-arrays": "^1.0.5",
                     "call-bind": "^1.0.2",
-                    "es-abstract": "^1.20.0",
                     "for-each": "^0.3.3",
+                    "gopd": "^1.0.1",
                     "has-tostringtag": "^1.0.0",
-                    "is-typed-array": "^1.1.9"
+                    "is-typed-array": "^1.1.10"
                   },
                   "devDependencies": {},
                   "peerDependencies": {}
@@ -22528,17 +21582,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "@babel/parser": {
-                  "version": "7.18.13",
-                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.13.tgz",
+                  "version": "7.20.3",
+                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.20.3.tgz",
                   "name": "@babel/parser",
-                  "integrity": "sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==",
+                  "integrity": "sha512-OP/s5a94frIPXwjzEcv5S/tpQfc6XhxYUnmWpgdqMWGgYCuErA3SzozaRAMQgSZWKeTJxht9aWAkUY+0UzvOFg==",
                   "bin": {
                     "parser": "bin/babel-parser.js"
                   },
                   "engines": {
                     "node": ">=6.0.0"
                   },
-                  "_id": "@babel/parser@7.18.13",
+                  "_id": "@babel/parser@7.20.3",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\parser",
                   "_dependencies": {},
@@ -22546,33 +21600,33 @@
                   "peerDependencies": {}
                 },
                 "@babel/types": {
-                  "version": "7.18.13",
-                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
+                  "version": "7.20.2",
+                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.20.2.tgz",
                   "name": "@babel/types",
-                  "integrity": "sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==",
+                  "integrity": "sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==",
                   "engines": {
                     "node": ">=6.9.0"
                   },
-                  "_id": "@babel/types@7.18.13",
+                  "_id": "@babel/types@7.20.2",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\types",
                   "_dependencies": {
-                    "@babel/helper-string-parser": "^7.18.10",
-                    "@babel/helper-validator-identifier": "^7.18.6",
+                    "@babel/helper-string-parser": "^7.19.4",
+                    "@babel/helper-validator-identifier": "^7.19.1",
                     "to-fast-properties": "^2.0.0"
                   },
                   "devDependencies": {},
                   "peerDependencies": {},
                   "dependencies": {
                     "@babel/helper-string-parser": {
-                      "version": "7.18.10",
-                      "resolved": "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.18.10.tgz",
+                      "version": "7.19.4",
+                      "resolved": "https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.19.4.tgz",
                       "name": "@babel/helper-string-parser",
-                      "integrity": "sha512-XtIfWmeNY3i4t7t4D2t02q50HvqHybPqW2ki1kosnvWCwuCMeo81Jf0gwr85jy/neUdg5XDdeFE/80DXiO+njw==",
+                      "integrity": "sha512-nHtDoQcuqFmwYNYPz3Rah5ph2p8PFeFCsZk9A/48dPc/rGocJ5J3hAAZ7pb76VWX3fZKu+uEr/FhH5jLx7umrw==",
                       "engines": {
                         "node": ">=6.9.0"
                       },
-                      "_id": "@babel/helper-string-parser@7.18.10",
+                      "_id": "@babel/helper-string-parser@7.19.4",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\helper-string-parser",
                       "_dependencies": {},
@@ -22580,14 +21634,14 @@
                       "peerDependencies": {}
                     },
                     "@babel/helper-validator-identifier": {
-                      "version": "7.18.6",
-                      "resolved": "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.18.6.tgz",
+                      "version": "7.19.1",
+                      "resolved": "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.19.1.tgz",
                       "name": "@babel/helper-validator-identifier",
-                      "integrity": "sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==",
+                      "integrity": "sha512-awrNfaMtnHUr653GgGEs++LlAvW6w+DcPrOliSMXWCKo597CwL5Acf/wWdNkf/tfEQE3mjkeD1YOVZOUV/od1w==",
                       "engines": {
                         "node": ">=6.9.0"
                       },
-                      "_id": "@babel/helper-validator-identifier@7.18.6",
+                      "_id": "@babel/helper-validator-identifier@7.19.1",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\helper-validator-identifier",
                       "_dependencies": {},
@@ -22754,17 +21808,17 @@
               "peerDependencies": {},
               "dependencies": {
                 "@babel/parser": {
-                  "version": "7.18.13",
+                  "version": "7.20.3",
                   "name": "@babel/parser",
-                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.18.13.tgz",
-                  "integrity": "sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==",
+                  "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.20.3.tgz",
+                  "integrity": "sha512-OP/s5a94frIPXwjzEcv5S/tpQfc6XhxYUnmWpgdqMWGgYCuErA3SzozaRAMQgSZWKeTJxht9aWAkUY+0UzvOFg==",
                   "bin": {
                     "parser": "bin/babel-parser.js"
                   },
                   "engines": {
                     "node": ">=6.0.0"
                   },
-                  "_id": "@babel/parser@7.18.13",
+                  "_id": "@babel/parser@7.20.3",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\parser",
                   "_dependencies": {},
@@ -22772,19 +21826,19 @@
                   "peerDependencies": {}
                 },
                 "@babel/types": {
-                  "version": "7.18.13",
+                  "version": "7.20.2",
                   "name": "@babel/types",
-                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
-                  "integrity": "sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==",
+                  "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.20.2.tgz",
+                  "integrity": "sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==",
                   "engines": {
                     "node": ">=6.9.0"
                   },
-                  "_id": "@babel/types@7.18.13",
+                  "_id": "@babel/types@7.20.2",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\types",
                   "_dependencies": {
-                    "@babel/helper-string-parser": "^7.18.10",
-                    "@babel/helper-validator-identifier": "^7.18.6",
+                    "@babel/helper-string-parser": "^7.19.4",
+                    "@babel/helper-validator-identifier": "^7.19.1",
                     "to-fast-properties": "^2.0.0"
                   },
                   "devDependencies": {},
@@ -22820,19 +21874,19 @@
                   "peerDependencies": {},
                   "dependencies": {
                     "@babel/types": {
-                      "version": "7.18.13",
+                      "version": "7.20.2",
                       "name": "@babel/types",
-                      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.18.13.tgz",
-                      "integrity": "sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==",
+                      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.20.2.tgz",
+                      "integrity": "sha512-FnnvsNWgZCr232sqtXggapvlkk/tuwR/qhGzcmxI0GXLCjmPYQPzio2FbdlWuY6y1sHFfQKk+rRbUZ9VStQMog==",
                       "engines": {
                         "node": ">=6.9.0"
                       },
-                      "_id": "@babel/types@7.18.13",
+                      "_id": "@babel/types@7.20.2",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@babel\\types",
                       "_dependencies": {
-                        "@babel/helper-string-parser": "^7.18.10",
-                        "@babel/helper-validator-identifier": "^7.18.6",
+                        "@babel/helper-string-parser": "^7.19.4",
+                        "@babel/helper-validator-identifier": "^7.19.1",
                         "to-fast-properties": "^2.0.0"
                       },
                       "devDependencies": {},
@@ -23268,10 +22322,10 @@
       }
     },
     "replace": {
-      "version": "1.2.1",
-      "resolved": "https://registry.npmjs.org/replace/-/replace-1.2.1.tgz",
+      "version": "1.2.2",
+      "resolved": "https://registry.npmjs.org/replace/-/replace-1.2.2.tgz",
       "name": "replace",
-      "integrity": "sha512-KZCBe/tPanwBlbjSMQby4l+zjSiFi3CLEP/6VLClnRYgJ46DZ5u9tmA6ceWeFS8coaUnU4ZdGNb/puUGMHNSRg==",
+      "integrity": "sha512-C4EDifm22XZM2b2JOYe6Mhn+lBsLBAvLbK8drfUQLTfD1KYl/n3VaW/CDju0Ny4w3xTtegBpg8YNSpFJPUDSjA==",
       "bin": {
         "replace": "bin/replace.js",
         "search": "bin/search.js"
@@ -23279,12 +22333,12 @@
       "engines": {
         "node": ">= 6"
       },
-      "_id": "replace@1.2.1",
+      "_id": "replace@1.2.2",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\replace",
       "_dependencies": {
         "chalk": "2.4.2",
-        "minimatch": "3.0.4",
+        "minimatch": "3.0.5",
         "yargs": "^15.3.1"
       },
       "devDependencies": {},
@@ -23310,14 +22364,14 @@
           "peerDependencies": {}
         },
         "minimatch": {
-          "version": "3.0.4",
-          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+          "version": "3.0.5",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.5.tgz",
           "name": "minimatch",
-          "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+          "integrity": "sha512-tUpxzX0VAzJHjLu0xUfFv1gwVp9ba3IOuRAVH2EGuRW8a5emA2FlACLqiT/lDVtS1W+TGNwqz3sWaNyLgDJWuw==",
           "engines": {
             "node": "*"
           },
-          "_id": "minimatch@3.0.4",
+          "_id": "minimatch@3.0.5",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\replace\\node_modules\\minimatch",
           "_dependencies": {
@@ -25089,17 +24143,17 @@
       }
     },
     "semver": {
-      "version": "7.3.7",
-      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
+      "version": "7.3.8",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
       "name": "semver",
-      "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+      "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
       "bin": {
         "semver": "bin/semver.js"
       },
       "engines": {
         "node": ">=10"
       },
-      "_id": "semver@7.3.7",
+      "_id": "semver@7.3.8",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\semver",
       "_dependencies": {
@@ -25142,10 +24196,10 @@
       }
     },
     "sequelize": {
-      "version": "6.21.4",
-      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.21.4.tgz",
+      "version": "6.25.5",
+      "resolved": "https://registry.npmjs.org/sequelize/-/sequelize-6.25.5.tgz",
       "name": "sequelize",
-      "integrity": "sha512-5A0+giRhGHerTDRMsZ54TYRB8oQPWxeVscbc4USG9wRtw2Eqik0Vk0p2EVDrhoq7tmNBh2nHpd9YMfvGdwPEJw==",
+      "integrity": "sha512-QwA2kL4lSNy4mYTv1Zm4DjvloZLaYajuYF5QMOv0O7FameMUEl8Q5zOWRD+FNKGCLzyOJ28gQCo3HX0N9mcssA==",
       "funding": [
         {
           "type": "opencollective",
@@ -25165,6 +24219,9 @@
         "mysql2": {
           "optional": true
         },
+        "oracledb": {
+          "optional": true
+        },
         "pg": {
           "optional": true
         },
@@ -25181,7 +24238,7 @@
           "optional": true
         }
       },
-      "_id": "sequelize@6.21.4",
+      "_id": "sequelize@6.25.5",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\sequelize",
       "_dependencies": {
@@ -25194,7 +24251,7 @@
         "moment": "^2.29.1",
         "moment-timezone": "^0.5.34",
         "pg-connection-string": "^2.5.0",
-        "retry-as-promised": "^5.0.0",
+        "retry-as-promised": "^6.1.0",
         "semver": "^7.3.5",
         "sequelize-pool": "^7.1.0",
         "toposort-class": "^1.0.1",
@@ -25234,11 +24291,11 @@
           }
         },
         "@types/validator": {
-          "version": "13.7.5",
-          "resolved": "https://registry.npmjs.org/@types/validator/-/validator-13.7.5.tgz",
+          "version": "13.7.10",
+          "resolved": "https://registry.npmjs.org/@types/validator/-/validator-13.7.10.tgz",
           "name": "@types/validator",
-          "integrity": "sha512-9rQHeAqz6Jw3gDhttkmWetoriW5FPbxylv/6h6mXtaj2NKRcOvOmvfcswVdLVpbuy10NrO486K3lCoLgoIhiIA==",
-          "_id": "@types/validator@13.7.5",
+          "integrity": "sha512-t1yxFAR2n0+VO6hd/FJ9F2uezAZVWHLmpmlJzm1eX03+H7+HsuTAp7L8QJs+2pQCfWkP1+EXsGK9Z9v7o/qPVQ==",
+          "_id": "@types/validator@13.7.10",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@types\\validator",
           "_dependencies": {},
@@ -25294,14 +24351,14 @@
           "peerDependencies": {}
         },
         "inflection": {
-          "version": "1.13.2",
+          "version": "1.13.4",
           "name": "inflection",
-          "resolved": "https://registry.npmjs.org/inflection/-/inflection-1.13.2.tgz",
-          "integrity": "sha512-cmZlljCRTBFouT8UzMzrGcVEvkv6D/wBdcdKG7J1QH5cXjtU75Dm+P27v9EKu/Y43UYyCJd1WC4zLebRrC8NBw==",
+          "resolved": "https://registry.npmjs.org/inflection/-/inflection-1.13.4.tgz",
+          "integrity": "sha512-6I/HUDeYFfuNCVS3td055BaXBwKYuzw7K3ExVMStBowKo9oOAMJIXIHvdyR3iboTCp1b+1i5DSkIZTcwIktuDw==",
           "engines": [
             "node >= 0.4.0"
           ],
-          "_id": "inflection@1.13.2",
+          "_id": "inflection@1.13.4",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\inflection",
           "_dependencies": {},
@@ -25321,14 +24378,14 @@
           "peerDependencies": {}
         },
         "moment-timezone": {
-          "version": "0.5.37",
-          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.37.tgz",
+          "version": "0.5.38",
+          "resolved": "https://registry.npmjs.org/moment-timezone/-/moment-timezone-0.5.38.tgz",
           "name": "moment-timezone",
-          "integrity": "sha512-uEDzDNFhfaywRl+vwXxffjjq1q0Vzr+fcQpQ1bU0kbzorfS7zVtZnCnGc8mhWmF39d4g4YriF6kwA75mJKE/Zg==",
+          "integrity": "sha512-nMIrzGah4+oYZPflDvLZUgoVUO4fvAqHstvG3xAUnMolWncuAiLDWNnJZj6EwJGMGfb1ZcuTFE6GI3hNOVWI/Q==",
           "engines": {
             "node": "*"
           },
-          "_id": "moment-timezone@0.5.37",
+          "_id": "moment-timezone@0.5.38",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\moment-timezone",
           "_dependencies": {
@@ -25382,11 +24439,11 @@
           "peerDependencies": {}
         },
         "retry-as-promised": {
-          "version": "5.0.0",
-          "resolved": "https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-5.0.0.tgz",
+          "version": "6.1.0",
+          "resolved": "https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-6.1.0.tgz",
           "name": "retry-as-promised",
-          "integrity": "sha512-6S+5LvtTl2ggBumk04hBo/4Uf6fRJUwIgunGZ7CYEBCeufGFW1Pu6ucUf/UskHeWOIsUcLOGLFXPig5tR5V1nA==",
-          "_id": "retry-as-promised@5.0.0",
+          "integrity": "sha512-Hj/jY+wFC+SB9SDlIIFWiGOHnNG0swYbGYsOj2BJ8u2HKUaobNKab0OIC0zOLYzDy0mb7A4xA5BMo4LMz5YtEA==",
+          "_id": "retry-as-promised@6.1.0",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\retry-as-promised",
           "_dependencies": {},
@@ -25394,17 +24451,17 @@
           "peerDependencies": {}
         },
         "semver": {
-          "version": "7.3.7",
+          "version": "7.3.8",
           "name": "semver",
-          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-          "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+          "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
           "bin": {
             "semver": "bin/semver.js"
           },
           "engines": {
             "node": ">=10"
           },
-          "_id": "semver@7.3.7",
+          "_id": "semver@7.3.8",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\semver",
           "_dependencies": {
@@ -25485,11 +24542,11 @@
           "peerDependencies": {},
           "dependencies": {
             "@types/node": {
-              "version": "18.7.13",
+              "version": "18.11.9",
               "name": "@types/node",
-              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
-              "integrity": "sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==",
-              "_id": "@types/node@18.7.13",
+              "resolved": "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz",
+              "integrity": "sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==",
+              "_id": "@types/node@18.11.9",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@types\\node",
               "_dependencies": {},
@@ -25739,11 +24796,11 @@
           "peerDependencies": {}
         },
         "@types/node": {
-          "version": "18.7.13",
-          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.7.13.tgz",
+          "version": "18.11.9",
+          "resolved": "https://registry.npmjs.org/@types/node/-/node-18.11.9.tgz",
           "name": "@types/node",
-          "integrity": "sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==",
-          "_id": "@types/node@18.7.13",
+          "integrity": "sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==",
+          "_id": "@types/node@18.11.9",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@types\\node",
           "_dependencies": {},
@@ -26106,10 +25163,10 @@
       }
     },
     "sqlite3": {
-      "version": "5.0.11",
-      "resolved": "https://registry.npmjs.org/sqlite3/-/sqlite3-5.0.11.tgz",
+      "version": "5.1.2",
+      "resolved": "https://registry.npmjs.org/sqlite3/-/sqlite3-5.1.2.tgz",
       "name": "sqlite3",
-      "integrity": "sha512-4akFOr7u9lJEeAWLJxmwiV43DJcGV7w3ab7SjQFAFaTVyknY3rZjvXTKIVtWqUoY4xwhjwoHKYs2HDW2SoHVsA==",
+      "integrity": "sha512-D0Reg6pRWAFXFUnZKsszCI67tthFD8fGPewRddDCX6w4cYwz3MbvuwRICbL+YQjBAh9zbw+lJ/V9oC8nG5j6eg==",
       "hasInstallScript": true,
       "optionalDependencies": {
         "node-gyp": "8.x"
@@ -26122,7 +25179,7 @@
           "optional": true
         }
       },
-      "_id": "sqlite3@5.0.11",
+      "_id": "sqlite3@5.1.2",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\sqlite3",
       "_dependencies": {
@@ -26134,14 +25191,14 @@
       "devDependencies": {},
       "dependencies": {
         "@mapbox/node-pre-gyp": {
-          "version": "1.0.9",
+          "version": "1.0.10",
           "name": "@mapbox/node-pre-gyp",
-          "resolved": "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.9.tgz",
-          "integrity": "sha512-aDF3S3rK9Q2gey/WAttUlISduDItz5BU3306M9Eyv6/oS40aMprnopshtlKTykxRNIBEZuRMaZAnbrQ4QtKGyw==",
+          "resolved": "https://registry.npmjs.org/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.10.tgz",
+          "integrity": "sha512-4ySo4CjzStuprMwk35H5pPbkymjv1SF3jGLj6rAHp/xT/RF7TL7bd9CTm1xDY49K2qF7jmR/g7k+SkLETP6opA==",
           "bin": {
             "node-pre-gyp": "bin/node-pre-gyp"
           },
-          "_id": "@mapbox/node-pre-gyp@1.0.9",
+          "_id": "@mapbox/node-pre-gyp@1.0.10",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@mapbox\\node-pre-gyp",
           "_dependencies": {
@@ -26456,17 +25513,17 @@
                           "peerDependencies": {}
                         },
                         "semver": {
-                          "version": "7.3.7",
+                          "version": "7.3.8",
                           "name": "semver",
-                          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-                          "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+                          "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+                          "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
                           "bin": {
                             "semver": "bin/semver.js"
                           },
                           "engines": {
                             "node": ">=10"
                           },
-                          "_id": "semver@7.3.7",
+                          "_id": "semver@7.3.8",
                           "extraneous": false,
                           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\semver",
                           "_dependencies": {
@@ -26482,6 +25539,7 @@
                       "resolved": "https://registry.npmjs.org/@npmcli/move-file/-/move-file-1.1.2.tgz",
                       "name": "@npmcli/move-file",
                       "integrity": "sha512-1SUf/Cg2GzGDyaf15aR9St9TWlb+XvbZXWpDx8YKs7MLzMH/BCeopv+y9vzrzgkfykCGuWOlSu3mZhj2+FQcrg==",
+                      "deprecated": "This functionality has been moved to @npmcli/fs",
                       "optional": true,
                       "engines": {
                         "node": ">=10"
@@ -26840,14 +25898,14 @@
                       "peerDependencies": {}
                     },
                     "tar": {
-                      "version": "6.1.11",
+                      "version": "6.1.12",
                       "name": "tar",
-                      "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.11.tgz",
-                      "integrity": "sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==",
+                      "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.12.tgz",
+                      "integrity": "sha512-jU4TdemS31uABHd+Lt5WEYJuzn+TJTCBLljvIAHZOz6M9Os5pJ4dD+vRFLxPa/n3T0iEFzpi+0x1UfuDZYbRMw==",
                       "engines": {
-                        "node": ">= 10"
+                        "node": ">=10"
                       },
-                      "_id": "tar@6.1.11",
+                      "_id": "tar@6.1.12",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\tar",
                       "_dependencies": {
@@ -27449,16 +26507,16 @@
                       }
                     },
                     "socks": {
-                      "version": "2.7.0",
-                      "resolved": "https://registry.npmjs.org/socks/-/socks-2.7.0.tgz",
+                      "version": "2.7.1",
+                      "resolved": "https://registry.npmjs.org/socks/-/socks-2.7.1.tgz",
                       "name": "socks",
-                      "integrity": "sha512-scnOe9y4VuiNUULJN72GrM26BNOjVsfPXI+j+98PkyEfsIXroa5ofyjT+FzGvn/xHs73U2JtoBYAVx9Hl4quSA==",
+                      "integrity": "sha512-7maUZy1N7uo6+WVEX6psASxtNlKaNVMlGQKkG/63nEDdLOWNbiUMoLK7X4uYoLhQstau72mLgfEWcXcwsaHbYQ==",
                       "optional": true,
                       "engines": {
                         "node": ">= 10.13.0",
                         "npm": ">= 3.0.0"
                       },
-                      "_id": "socks@2.7.0",
+                      "_id": "socks@2.7.1",
                       "extraneous": false,
                       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\socks",
                       "_dependencies": {
@@ -27945,17 +27003,17 @@
               "peerDependencies": {}
             },
             "semver": {
-              "version": "7.3.7",
+              "version": "7.3.8",
               "name": "semver",
-              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.7.tgz",
-              "integrity": "sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==",
+              "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz",
+              "integrity": "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==",
               "bin": {
                 "semver": "bin/semver.js"
               },
               "engines": {
                 "node": ">=10"
               },
-              "_id": "semver@7.3.7",
+              "_id": "semver@7.3.8",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\semver",
               "_dependencies": {
@@ -27965,14 +27023,14 @@
               "peerDependencies": {}
             },
             "tar": {
-              "version": "6.1.11",
+              "version": "6.1.12",
               "name": "tar",
-              "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.11.tgz",
-              "integrity": "sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==",
+              "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.12.tgz",
+              "integrity": "sha512-jU4TdemS31uABHd+Lt5WEYJuzn+TJTCBLljvIAHZOz6M9Os5pJ4dD+vRFLxPa/n3T0iEFzpi+0x1UfuDZYbRMw==",
               "engines": {
-                "node": ">= 10"
+                "node": ">=10"
               },
-              "_id": "tar@6.1.11",
+              "_id": "tar@6.1.12",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\tar",
               "_dependencies": {
@@ -28009,14 +27067,14 @@
           }
         },
         "tar": {
-          "version": "6.1.11",
-          "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.11.tgz",
+          "version": "6.1.12",
+          "resolved": "https://registry.npmjs.org/tar/-/tar-6.1.12.tgz",
           "name": "tar",
-          "integrity": "sha512-an/KZQzQUkZCkuoAA64hM92X0Urb6VpRhAFllDzz44U2mcD5scmT3zBc4VgVpkugF580+DQn8eAFSyoQt0tznA==",
+          "integrity": "sha512-jU4TdemS31uABHd+Lt5WEYJuzn+TJTCBLljvIAHZOz6M9Os5pJ4dD+vRFLxPa/n3T0iEFzpi+0x1UfuDZYbRMw==",
           "engines": {
-            "node": ">= 10"
+            "node": ">=10"
           },
-          "_id": "tar@6.1.11",
+          "_id": "tar@6.1.12",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\tar",
           "_dependencies": {
@@ -28246,17 +27304,17 @@
       }
     },
     "swagger-ui-express": {
-      "version": "4.5.0",
-      "resolved": "https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.5.0.tgz",
+      "version": "4.6.0",
+      "resolved": "https://registry.npmjs.org/swagger-ui-express/-/swagger-ui-express-4.6.0.tgz",
       "name": "swagger-ui-express",
-      "integrity": "sha512-DHk3zFvsxrkcnurGvQlAcLuTDacAVN1JHKDgcba/gr2NFRE4HGwP1YeHIXMiGznkWR4AeS7X5vEblNn4QljuNA==",
+      "integrity": "sha512-ZxpQFp1JR2RF8Ar++CyJzEDdvufa08ujNUJgMVTMWPi86CuQeVdBtvaeO/ysrz6dJAYXf9kbVNhWD7JWocwqsA==",
       "engines": {
         "node": ">= v0.10.32"
       },
       "peerDependencies": {
         "express": ">=4.0.0"
       },
-      "_id": "swagger-ui-express@4.5.0",
+      "_id": "swagger-ui-express@4.6.0",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\swagger-ui-express",
       "_dependencies": {
@@ -28265,20 +27323,20 @@
       "devDependencies": {},
       "dependencies": {
         "express": {
-          "version": "4.18.1",
+          "version": "4.18.2",
           "name": "express",
-          "resolved": "https://registry.npmjs.org/express/-/express-4.18.1.tgz",
-          "integrity": "sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==",
+          "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+          "integrity": "sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==",
           "engines": {
             "node": ">= 0.10.0"
           },
-          "_id": "express@4.18.1",
+          "_id": "express@4.18.2",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\express",
           "_dependencies": {
             "accepts": "~1.3.8",
             "array-flatten": "1.1.1",
-            "body-parser": "1.20.0",
+            "body-parser": "1.20.1",
             "content-disposition": "0.5.4",
             "content-type": "~1.0.4",
             "cookie": "0.5.0",
@@ -28297,7 +27355,7 @@
             "parseurl": "~1.3.3",
             "path-to-regexp": "0.1.7",
             "proxy-addr": "~2.0.7",
-            "qs": "6.10.3",
+            "qs": "6.11.0",
             "range-parser": "~1.2.1",
             "safe-buffer": "5.2.1",
             "send": "0.18.0",
@@ -28312,11 +27370,11 @@
           "peerDependencies": {}
         },
         "swagger-ui-dist": {
-          "version": "4.14.0",
-          "resolved": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.14.0.tgz",
+          "version": "4.15.5",
+          "resolved": "https://registry.npmjs.org/swagger-ui-dist/-/swagger-ui-dist-4.15.5.tgz",
           "name": "swagger-ui-dist",
-          "integrity": "sha512-TBzhheU15s+o54Cgk9qxuYcZMiqSm/SkvKnapoGHOF66kz0Y5aGjpzj5BT/vpBbn6rTPJ9tUYXQxuDWfsjiGMw==",
-          "_id": "swagger-ui-dist@4.14.0",
+          "integrity": "sha512-V3eIa28lwB6gg7/wfNvAbjwJYmDXy1Jo1POjyTzlB6wPcHiGlRxq39TSjYGVjQrUSAzpv+a7nzp7mDxgNy57xA==",
+          "_id": "swagger-ui-dist@4.15.5",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\swagger-ui-dist",
           "_dependencies": {},
@@ -28729,11 +27787,14 @@
           }
         },
         "minimist": {
-          "version": "1.2.6",
+          "version": "1.2.7",
           "name": "minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-          "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-          "_id": "minimist@1.2.6",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+          "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+          "funding": {
+            "url": "https://github.com/sponsors/ljharb"
+          },
+          "_id": "minimist@1.2.7",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
           "_dependencies": {},
@@ -28782,14 +27843,14 @@
           "peerDependencies": {},
           "dependencies": {
             "is-core-module": {
-              "version": "2.10.0",
-              "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.10.0.tgz",
+              "version": "2.11.0",
+              "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.11.0.tgz",
               "name": "is-core-module",
-              "integrity": "sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==",
+              "integrity": "sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==",
               "funding": {
                 "url": "https://github.com/sponsors/ljharb"
               },
-              "_id": "is-core-module@2.10.0",
+              "_id": "is-core-module@2.11.0",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\is-core-module",
               "_dependencies": {
@@ -29063,10 +28124,10 @@
               "peerDependencies": {}
             },
             "typescript": {
-              "version": "4.8.2",
+              "version": "4.8.4",
               "name": "typescript",
-              "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
-              "integrity": "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==",
+              "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.4.tgz",
+              "integrity": "sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==",
               "peer": true,
               "bin": {
                 "tsc": "bin/tsc",
@@ -29075,7 +28136,7 @@
               "engines": {
                 "node": ">=4.2.0"
               },
-              "_id": "typescript@4.8.2",
+              "_id": "typescript@4.8.4",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\typescript",
               "_dependencies": {},
@@ -29173,10 +28234,10 @@
           }
         },
         "typescript": {
-          "version": "4.8.2",
-          "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
+          "version": "4.8.4",
+          "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.4.tgz",
           "name": "typescript",
-          "integrity": "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==",
+          "integrity": "sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==",
           "peer": true,
           "bin": {
             "tsc": "bin/tsc",
@@ -29185,7 +28246,7 @@
           "engines": {
             "node": ">=4.2.0"
           },
-          "_id": "typescript@4.8.2",
+          "_id": "typescript@4.8.4",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\typescript",
           "_dependencies": {},
@@ -29425,11 +28486,14 @@
               "peerDependencies": {},
               "dependencies": {
                 "minimist": {
-                  "version": "1.2.6",
+                  "version": "1.2.7",
                   "name": "minimist",
-                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz",
-                  "integrity": "sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==",
-                  "_id": "minimist@1.2.6",
+                  "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz",
+                  "integrity": "sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==",
+                  "funding": {
+                    "url": "https://github.com/sponsors/ljharb"
+                  },
+                  "_id": "minimist@1.2.7",
                   "extraneous": false,
                   "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\minimist",
                   "_dependencies": {},
@@ -29633,17 +28697,18 @@
       }
     },
     "winston": {
-      "version": "3.8.1",
-      "resolved": "https://registry.npmjs.org/winston/-/winston-3.8.1.tgz",
+      "version": "3.8.2",
+      "resolved": "https://registry.npmjs.org/winston/-/winston-3.8.2.tgz",
       "name": "winston",
-      "integrity": "sha512-r+6YAiCR4uI3N8eQNOg8k3P3PqwAm20cLKlzVD9E66Ch39+LZC+VH1UKf9JemQj2B3QoUHfKD7Poewn0Pr3Y1w==",
+      "integrity": "sha512-MsE1gRx1m5jdTTO9Ld/vND4krP2To+lgDoMEHGGa4HIlAUyXJtfc7CxQcGXVyz2IBpw5hbFkj2b/AtUdQwyRew==",
       "engines": {
         "node": ">= 12.0.0"
       },
-      "_id": "winston@3.8.1",
+      "_id": "winston@3.8.2",
       "extraneous": false,
       "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\winston",
       "_dependencies": {
+        "@colors/colors": "1.5.0",
         "@dabh/diagnostics": "^2.0.2",
         "async": "^3.2.3",
         "is-stream": "^2.0.0",
@@ -29658,6 +28723,21 @@
       "devDependencies": {},
       "peerDependencies": {},
       "dependencies": {
+        "@colors/colors": {
+          "version": "1.5.0",
+          "resolved": "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz",
+          "name": "@colors/colors",
+          "integrity": "sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==",
+          "engines": {
+            "node": ">=0.1.90"
+          },
+          "_id": "@colors/colors@1.5.0",
+          "extraneous": false,
+          "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\@colors\\colors",
+          "_dependencies": {},
+          "devDependencies": {},
+          "peerDependencies": {}
+        },
         "@dabh/diagnostics": {
           "version": "2.0.3",
           "resolved": "https://registry.npmjs.org/@dabh/diagnostics/-/diagnostics-2.0.3.tgz",
@@ -29867,8 +28947,8 @@
           "dependencies": {
             "@colors/colors": {
               "version": "1.5.0",
-              "resolved": "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz",
               "name": "@colors/colors",
+              "resolved": "https://registry.npmjs.org/@colors/colors/-/colors-1.5.0.tgz",
               "integrity": "sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==",
               "engines": {
                 "node": ">=0.1.90"
@@ -29905,14 +28985,14 @@
               "peerDependencies": {}
             },
             "safe-stable-stringify": {
-              "version": "2.3.1",
+              "version": "2.4.1",
               "name": "safe-stable-stringify",
-              "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.3.1.tgz",
-              "integrity": "sha512-kYBSfT+troD9cDA85VDnHZ1rpHC50O0g1e6WlGHVCz/g+JS+9WKLj+XwFYyR8UbrZN8ll9HUpDAAddY58MGisg==",
+              "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.4.1.tgz",
+              "integrity": "sha512-dVHE6bMtS/bnL2mwualjc6IxEv1F+OCUpA46pKUj6F8uDbUM0jCCulPqRNPSnWwGNKx5etqMjZYdXtrm5KJZGA==",
               "engines": {
                 "node": ">=10"
               },
-              "_id": "safe-stable-stringify@2.3.1",
+              "_id": "safe-stable-stringify@2.4.1",
               "extraneous": false,
               "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\safe-stable-stringify",
               "_dependencies": {},
@@ -30021,14 +29101,14 @@
           }
         },
         "safe-stable-stringify": {
-          "version": "2.3.1",
-          "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.3.1.tgz",
+          "version": "2.4.1",
+          "resolved": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.4.1.tgz",
           "name": "safe-stable-stringify",
-          "integrity": "sha512-kYBSfT+troD9cDA85VDnHZ1rpHC50O0g1e6WlGHVCz/g+JS+9WKLj+XwFYyR8UbrZN8ll9HUpDAAddY58MGisg==",
+          "integrity": "sha512-dVHE6bMtS/bnL2mwualjc6IxEv1F+OCUpA46pKUj6F8uDbUM0jCCulPqRNPSnWwGNKx5etqMjZYdXtrm5KJZGA==",
           "engines": {
             "node": ">=10"
           },
-          "_id": "safe-stable-stringify@2.3.1",
+          "_id": "safe-stable-stringify@2.4.1",
           "extraneous": false,
           "path": "D:\\a\\cyclonedx-node-npm\\cyclonedx-node-npm\\demo\\juice-shop\\project\\node_modules\\safe-stable-stringify",
           "_dependencies": {},

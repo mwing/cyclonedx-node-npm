@@ -22,10 +22,19 @@ on:
           - alpha
         default: rc
         required: false
+      prerelease:
+        description: "This is a pre-release"
+        type: boolean
+        default: false
+        required: false
+
+permissions: write-all
 
 env:
   REPORTS_DIR: CI_reports
-  NODE_ACTIVE_LTS: "16"
+  PACKED_DIR: CI_packed
+  PACKED_ARTIFACT: packed
+  NODE_ACTIVE_LTS: "22"  # https://nodejs.org/en/about/releases/
 
 jobs:
   bump:
@@ -39,29 +48,30 @@ jobs:
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Configure Git
         # needed for push back of changes
         run: |
-          set -ex
+          set -eux
           git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --local user.name "${GITHUB_ACTOR}"
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
         run: |
-          set -ex
-          VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE" --preid "$NPMV_PREID")"
+          set -eux
+          COMMIT_SIG="Signed-off-by: $(git config user.name) <$(git config user.email)>"
+          VERSION="$(npm version "$NPMV_NEWVERSION" --message "$NPMV_MESSAGE"$'\n\n'"$COMMIT_SIG" --preid "$NPMV_PREID")"
           echo "::debug::new version = $VERSION"
           VERSION_PLAIN="${VERSION:1}" # remove 'v' prefix
           echo "::debug::plain version = $VERSION_PLAIN"
-          echo "::set-output name=version::$VERSION"
-          echo "::set-output name=version_plain::$VERSION_PLAIN"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "version_plain=$VERSION_PLAIN" >> $GITHUB_OUTPUT
         env:
           NPMV_NEWVERSION: ${{ github.event.inputs.newversion }}
           NPMV_MESSAGE: ${{ github.event.inputs.commitMessage }}
@@ -75,26 +85,43 @@ jobs:
     name: publish NPMJS
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ needs.bump.outputs.version }}
       - name: Setup Node.js ${{ env.NODE_ACTIVE_LTS }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
       - name: install build tools
-        run: npm ci --ignore-scripts
+        run: npm i --ignore-scripts
       # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
-      - name: publish to NPMJS
-        run: |
-          npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
-          npm publish --access public
+      - name: login to NPMJS
+        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+        run: >
+          npm publish
+          --provenance
+          --access public
+          --tag "$NPMJS_RELEASE_TAG"
+      - name: pack release result
+        run: |
+          mkdir -p "$PACKED_DIR"
+          npm pack --pack-destination "$PACKED_DIR"
+      - name: artifact release result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PACKED_ARTIFACT }}
+          path: ${{ env.PACKED_DIR }}/
+          if-no-files-found: error
 
   release-GH:
     needs:
@@ -106,13 +133,20 @@ jobs:
     env:
       ASSETS_DIR: release_assets
     steps:
+      - name: fetch release result
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.PACKED_ARTIFACT }}
+          path: ${{ env.ASSETS_DIR }}
       - name: Create Release
         id: release
         # see https://github.com/softprops/action-gh-release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ needs.bump.outputs.version }}
-          name:     ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ startsWith(github.event.inputs.newversion, 'pre') || contains(github.event.inputs.newversion, 'rc') || contains(github.event.inputs.newversion, 'beta') || contains(github.event.inputs.newversion, 'alpha')}}
+          tag_name:   ${{ needs.bump.outputs.version }}
+          name:       ${{ needs.bump.outputs.version_plain }}
+          prerelease: ${{ github.event.inputs.prerelease }}
+          files:      ${{ env.ASSETS_DIR }}/*

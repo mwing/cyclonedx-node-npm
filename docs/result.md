@@ -2,20 +2,106 @@
 
 This document will describe, how certain SBOM results should be deducted.
 
-## Basics
+## Preamble 
 
-A package might have a name, a version, and dependencies.  
-This information is usually stored in a `package.json` file.
+Read [NodeJs Internals](nodejs_internals.md) first.
 
-## Project -> `bom.metadata.component`
+## Examples and Visualisation
 
-TBD
+Let the dependencies be in a non-range manner.
+Let component `strip-ansi@7.0.1` require in a range manner: `ansi-regex@^6`.
 
-## Package -> `...component`
+### Dependency Graph
 
-TBD
+```mermaid
+graph TB
+    R((application))
+    A((some-module))
+    B((other-module))
+    C1((strip-ansi<br/>7.0.1))
+    C2((strip-ansi<br/>7.0.1))
+    D1((ansi-regex<br/>6.0.1))
+    D2((ansi-regex<br/>6.0.0))
+    D3((ansi-regex<br/>5.0.1))
+    R  --> A
+    R  --> B
+    R  --> D3
+    A  --> C1
+    B  --> C2
+    A  --> D1
+    B  --> D2
+    C1 --> D1
+    C2 --> D2
+```
 
-## Bundled dependencies -> `...component.components`
+### A corresponding File-System Tree
+
+```text
+application
+└── node_modules
+    ├── ansi-regex              <- @5.0.1
+    ├── other-module
+    │   └── node_modules
+    │       ├── ansi-regex      <- @6.0.0
+    │       └── strip-ansi      <- @7.0.1
+    └── some-module
+        └── node_modules
+            ├── ansi-regex      <- @6.0.1
+            └── strip-ansi      <- @7.0.1
+```
+
+### The corresponding Module Resolution Graph
+
+```mermaid
+graph LR
+    R((application))
+    A((some-module))
+    B((other-module))
+    C1((strip-ansi<br/>7.0.1))
+    C2((strip-ansi<br/>7.0.1))
+    D1((ansi-regex<br/>6.0.1))
+    D2((ansi-regex<br/>6.0.0))
+    D3((ansi-regex<br/>5.0.1))
+    R  --> A
+    R  --> B
+    R  --> D3
+    A  --- B
+    B  --- D3
+    D3 --- A
+    A  --- C1
+    B  --- C2
+    A  --- D1
+    B  --- D2
+    C1 --- D1
+    C2 --- D2
+    C1 --> B
+    C2 --> A
+    D1 --> B
+    D2 --> A
+```
+
+### The resulting CycloneDX SBOM
+
+... to be described
+
+### Component De-duplication
+
+NPM does the needed graph de-duplications internally already when it generates the affective module layout in the file system.  
+See [`npm dedupe` docs](https://github.com/npm/cli/blob/latest/docs/lib/content/commands/npm-dedupe.md).
+
+See also: [Component De-duplication](component_deduplication.md)
+
+----
+
+## Project => `bom.metadata.component`
+
+... to be described
+
+## Package => `...component`
+
+... to be described
+
+## Bundled dependencies => `...component.components`
 
 Some projects might have [`bundleDependencies`](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#bundledependencies),
 which means, that dependencies are part of a package
@@ -25,7 +111,10 @@ This results in a bundle where the project itself and all the `bundleDependencie
 When rendering a CycloneDX document:
 
 * `bundleDependencies` should be rendered as subcomponents of a `component`.
+* `bundleDependencies` should be rendered as component with property `cdx:npm:package:path = true`.
 * `bundleDependencies` should be treated as regular `dependencies`.
+
+Flattening subcomponents should not be an issue, as long as every component has the property `cdx:npm:package:path` set.
 
 Example:
 
@@ -37,99 +126,155 @@ Example:
   "version": 1,
   "metadata": {
     "component": {
-      "bom-ref": "acme/my-project",
+      "bom-ref": "@acme/my-project",
       "type": "application",
-      "group": "acme",
+      "group": "@acme",
       "name": "my-project",
-      "purl": "pkg:npm/acme/my-project",
-      "components": [
+      "purl": "pkg:npm/%40acme/my-project",
+      "properties": [
         {
-          "bom-ref": "acme/my-project#acme/my-bundled-package",
-          "type": "library",
-          "group": "acme",
-          "name": "my-bundled-package",
-          "version": "1",
-          "purl": "pkg:npm/acme/my-bundled-package@1"
-        },
-        {
-          "bom-ref": "acme/my-project#foo/package-A",
-          "type": "library",
-          "group": "foo",
-          "name": "package-A",
-          "version": "1",
-          "purl": "pkg:npm/foo/package-A@1"
+          "name": "cdx:npm:package:path",
+          "value": ""
         }
       ]
     }
   },
   "components": [
     {
-      "bom-ref": "bar/package-with-bundled-deps",
+      "bom-ref": "@acme/my-project|@acme/my-bundled-package@1",
       "type": "library",
-      "group": "bar",
-      "name": "package-with-bundled-deps",
+      "group": "@acme",
+      "name": "my-bundled-package",
       "version": "1",
-      "purl": "pkg:npm/bar/package-with-bundled-deps@1",
-      "components": [
+      "purl": "pkg:npm/%40acme/my-bundled-package@1",
+      "properties": [
         {
-          "bom-ref": "bar/package-with-bundled-deps#baz/package-B",
-          "type": "library",
-          "group": "baz",
-          "name": "package-B",
-          "version": "1",
-          "purl": "pkg:npm/baz/package-B@1"
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
         },
         {
-          "bom-ref": "bar/package-with-bundled-deps#bundled-internal-package",
-          "type": "library",
-          "name": "bundled-internal-package",
-          "purl": "pkg:npm/bundled-internal-package"
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@acme/my-bundled-package"
         }
       ]
     },
     {
-      "bom-ref": "foo/package-A",
+      "bom-ref": "@acme/my-project|@foo/package-A@1",
       "type": "library",
-      "group": "foo",
+      "group": "@foo",
+      "name": "package-A",
+      "version": "1",
+      "purl": "pkg:npm/%40foo/package-A@1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:bundled",
+          "value": "true"
+        },
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@foo/package-A"
+        }
+      ]
+    },
+    {
+      "bom-ref": "@bar/package-with-bundled-deps@1",
+      "type": "library",
+      "group": "@bar",
+      "name": "package-with-bundled-deps",
+      "version": "1",
+      "purl": "pkg:npm/%40bar/package-with-bundled-deps@1",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@bar/package-with-bundled-deps"
+        }
+      ],
+      "components": [
+        {
+          "bom-ref": "@bar/package-with-bundled-deps@1|@baz/package-B@1",
+          "type": "library",
+          "group": "@baz",
+          "name": "package-B",
+          "version": "1",
+          "purl": "pkg:npm/%40baz/package-B@1",
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/@bar/package-with-bundled-deps/node_modules/@baz/package-B"
+            }
+          ]
+        },
+        {
+          "bom-ref": "@bar/package-with-bundled-deps@1|bundled-internal-package",
+          "type": "library",
+          "name": "bundled-internal-package",
+          "purl": "pkg:npm/%40bundled-internal-package",
+          "properties": [
+            {
+              "name": "cdx:npm:package:bundled",
+              "value": "true"
+            },
+            {
+              "name": "cdx:npm:package:path",
+              "value": "node_modules/@bar/package-with-bundled-deps/node_modules/bundled-internal-package"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bom-ref": "@foo/package-A@3",
+      "type": "library",
+      "group": "@foo",
       "name": "package-A",
       "version": "3",
-      "purl": "pkg:npm/foo/package-A@3"
+      "purl": "pkg:npm/%40foo/package-A@3",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@foo/package-A"
+        }
+      ]
     }
   ],
   "dependencies": [
     {
-      "ref": "my-project",
+      "ref": "@acme/my-project",
       "dependsOn": [
-        "acme/my-project#acme/my-bundled-package",
-        "acme/my-project#foo/package-A",
-        "bar/package-with-bundled-deps"
+        "@acme/my-project|@acme/my-bundled-package@1",
+        "@acme/my-project|@foo/package-A@1",
+        "@bar/package-with-bundled-deps@1"
       ]
     },
     {
-      "ref": "acme/my-project#acme/my-bundled-package",
-      "dependsOn": ["acme/my-project#foo/package-A"]
+      "ref": "@acme/my-project|@acme/my-bundled-package@1",
+      "dependsOn": ["@acme/my-project|@foo/package-A@1"]
     },
     {
-      "ref": "acme/my-project#foo/package-A"
+      "ref": "@acme/my-project|@foo/package-A@1"
     },
     {
-      "ref": "bar/package-with-bundled-deps",
+      "ref": "@bar/package-with-bundled-deps@1",
       "dependsOn": [
-        "bar/package-with-bundled-deps#bundled-internal-package",
-        "foo/package-A"
+        "@bar/package-with-bundled-deps@1|bundled-internal-package",
+        "@acme/my-project|@foo/package-A@1"
       ]
     },
     {
-      "ref": "bar/package-with-bundled-deps#bundled-internal-package",
+      "ref": "@bar/package-with-bundled-deps@1|bundled-internal-package",
       "dependsOn": [
-        "bar/package-with-bundled-deps#baz/package-B"
+        "@bar/package-with-bundled-deps@1|@baz/package-B@1"
       ]
     },
     {
-      "ref": "bar/package-with-bundled-deps#baz/package-B"
+      "ref": "@bar/package-with-bundled-deps@1|@baz/package-B@1"
     },
     {
-      "ref": "foo/package-A"
+      "ref": "@foo/package-A@3"
     }
   ]
 }

@@ -4,6 +4,7 @@
 
 Install local workspaces and see how they behave.
 
+Workspaces are a feature that is available since NPM7.
 
 ## remarks
 
@@ -11,6 +12,8 @@ Install local workspaces and see how they behave.
 * The `resolved` is relative to each `path`.
 
 ## output
+
+see [demo snapshots](../../tests/_data/npm-ls_demo-results/local-workspaces).
 
 Output of `npm ls --json -a -l` look like this:
 

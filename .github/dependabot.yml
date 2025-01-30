@@ -1,4 +1,4 @@
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
 updates:
@@ -15,6 +15,40 @@ updates:
       prefix: 'chore'  ## prefix maximum string length of 15
       include: 'scope'
     open-pull-requests-limit: 999
+    ignore:
+      - dependency-name: "@types/node"
+        # version is like `ts.X.Y` -- need to maintain manually
+    groups:
+      cyclonedx:
+        patterns:
+          - '@cyclonedx/*'
+      typescript:
+        patterns:
+          - 'typescript'
+          - '@types/*'
+          - 'typedoc'
+          - 'typedoc-*'
+          - '@microsoft/tsdoc'
+          - '@microsoft/tsdoc-*'
+          - 'ts-loader'
+          - 'tslib'
+      eslint:
+        patterns:
+          - 'eslint'
+          - '@eslint/*'
+          - 'eslint-*'
+          - '@eslint-community/*'
+          - '@typescript-eslint/*'
+          - '@types/eslint'
+          - '@types/eslint*'
+      jest:
+        patterns:
+          - 'jest'
+          - '@jest/*'
+          - 'jest-*'
+          - 'babel-jest'
+          - '@types/jest'
+          - '@types/jest*'
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:

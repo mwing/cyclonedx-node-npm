@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-try {
-  require('../dist/cli.js').run(process)
-} catch (e) {
+/* !!! do not remove/rename this file, it is public CLI in replacement for an API !!! */
+require('../dist/cli.js').run(process).catch(e => {
   process.stderr.write(`\n${e}\n`)
-  process.exit(e?.code || 1)
-}
+  return Math.max(1, Math.floor(Number(e?.code)) || 254)
+}).then(exitCode => {
+  process.exitCode = exitCode
+})

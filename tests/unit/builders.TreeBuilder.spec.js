@@ -1,5 +1,3 @@
-'use strict'
-
 /*!
 This file is part of CycloneDX generator for NPM projects.
 
@@ -20,6 +18,8 @@ Copyright (c) OWASP Foundation. All Rights Reserved.
 */
 
 const { TreeBuilder } = require('../../dist/builders')
+
+const { describe, expect, test } = require('@jest/globals')
 
 describe('builders.TreeBuilder', () => {
   describe('fromPaths', () => {

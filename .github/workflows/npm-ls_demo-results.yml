@@ -4,17 +4,6 @@
 name: npm-ls demo results
 
 on:
-  #push:
-  #  branches: [ 'master', '1.0-dev' ]
-  #  paths:
-  #    - '!**'
-  #    - 'demos/*/project/*'
-  #    - '.github/workflows/npm-ls_demo-results.yml' # this file
-  #pull_request:
-  #  paths:
-  #    - '!**'
-  #    - 'demos/*/project/**'
-  #    - '.github/workflows/npm-ls_demo-results.yml' # this file
   workflow_dispatch:
 
 env:
@@ -24,73 +13,155 @@ env:
 
 jobs:
   demo-results:
-    name: ${{ matrix.subject }} npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}
+    name: '${{ matrix.subject }} ${{matrix.additional_npm-ls_args}} | npm${{ matrix.npm-version }} node${{ matrix.node-version }} ${{ matrix.os }}'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false # gather all the results !
       matrix:
         subject:
+          # - deps-from-git
+          - alternative-package-registry
           - bundled-dependencies
           - dev-dependencies
+          - juice-shop
           - local-dependencies
           - local-workspaces
-          - juice-shop
+          - package-integrity
+          - package-with-build-id
+        additional_npm-ls_args: [ '' ]
         npm-version:
-          - '8'      # Current
-          - '7'      # Legacy
-          - '6'      # Legacy
-          - '6.0.0'  # Lowest supported by this project
+          ## see https://www.npmjs.com/package/npm?activeTab=versions
+          ## see also: https://github.com/npm/cli/releases
+          - '11'     # Current
+          #- '10'     # Legacy
+          #- '9'      # Legacy
+          #- '8'      # Legacy
+          #- '7'      # Legacy
+          #- '6'      # Legacy
         node-version:
           ## action based on https://github.com/actions/node-versions/releases
           ## see also: https://nodejs.org/en/about/releases/
-          - '18'      # Current
-          - '16'      # Active LTS
-          - '14'      # Maintenance LTS
+          - '22'     # Current
+          - '20'     # Active LTS
+          - '18'
+          - '16'
+          - '14'
         os:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+        include:
+          - subject: local-workspaces
+            additional_npm-ls_args: '--workspace=my-local-e'
+            npm-version: '11'   # Current
+            node-version: '22'  # LTS
+            os: ubuntu-latest
+          - subject: local-workspaces
+            additional_npm-ls_args: '--workspace=my-local --workspace=my-local-e'
+            npm-version: '11'   # Current
+            node-version: '22'  # LTS
+            os: ubuntu-latest
+          - subject: local-workspaces
+            additional_npm-ls_args: '--workspaces'
+            npm-version: '11'   # Current
+            node-version: '22'  # LTS
+            os: ubuntu-latest
         exclude:
-          - # juice-shop might not be node14 compatible
+          - # macos-latest no longer supports node14
+            os: macos-latest
+            node-version: '14'
+          - # npm11 requires node ^20.17.0 || >=22.9.0
+            npm-version: '11'
+            node-version: '18'
+          - # npm11 requires node ^20.17.0 || >=22.9.0
+            npm-version: '11'
+            node-version: '16'
+          - # npm11 requires node ^20.17.0 || >=22.9.0
+            npm-version: '11'
+            node-version: '14'
+          - # npm10 requires node ^18.17.0 || >=20.5.0
+            npm-version: '10'
+            node-version: '16'
+          - # npm10 requires node ^18.17.0 || >=20.5.0
+            npm-version: '10'
+            node-version: '14'
+          - # npm9 upgrade/install failed on node14
+            npm-version: '9'
+            node-version: '14'
+          - # our specific version of juice-shop might not be node22 compatible
+            subject: juice-shop
+            node-version: '22'
+          - # our specific version of juice-shop might not be node14 compatible
             subject: juice-shop
             node-version: '14'
+          - # our specific version of juice-shop might not be npm6 compatible
+            subject: juice-shop
+            npm-version: '6'
+          - # workspaces are a feature of NPM since 7.0
+            subject: local-workspaces
+            npm-version: '6'
     timeout-minutes: 10 # this is a large matrix, just don't waste time!
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: prepare output
         run: |
           mkdir -p '${{ env.RESULTS_DIR }}'
-          echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
-        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+          echo 'OUT_FILE_PREFIX=${{ env.RESULTS_DIR }}/npm-ls${{ matrix.additional_npm-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}' >> $GITHUB_ENV
+        working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
         shell: bash # don't want to write tht code twice, windows and unix-like
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project/package.json
+          check-latest: true
+      - name: up-/down-grade npm to ${{ matrix.npm-version }}
+        run: npm i -g 'npm@${{ matrix.npm-version }}'
       - name: report versions
         run: |
           node --version
           npm  --version
-      - name: setup reproducible demo
-        run: npm i --no-audit --no-fund
+      - name: setup demo
+        run: npm i --no-audit --no-fund --ignore-scripts
         working-directory: ${{ env.DEMO_ROOT_DIR }}/${{ matrix.subject }}/project
-      - name: npm-ls --all --long --json
+      - name: npm-ls ls --json --all --long
         # important: the command in use is the same used by the internal builders of this project
         run: >
           npm --prefix project
-          ls --all --long --json
-          2> ${{ env.OUT_FILE_PREFIX }}.err.log
-          >  ${{ env.OUT_FILE_PREFIX }}.json
-        working-directory: ${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}
+          ls --json --all --long ${{ matrix.additional_npm-ls_args }}
+          2> '${{ env.OUT_FILE_PREFIX }}.err.log'
+          1> '${{ env.OUT_FILE_PREFIX }}.json'
+        working-directory: '${{ env.DEMO_ROOT_DIR}}/${{ matrix.subject }}'
       - name: Artifact RESULTS
         # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v3
+        if: ${{ ! cancelled() }}
+        uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.RESULTS_ARTIFACT }}
-          path: ${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}
+          name: '${{ env.RESULTS_ARTIFACT }}_${{ matrix.subject }}${{ matrix.additional_npm-ls_args }}_npm${{ matrix.npm-version }}_node${{ matrix.node-version }}_${{ matrix.os }}'
+          path: '${{ env.DEMO_ROOT_DIR}}/*/${{ env.RESULTS_DIR }}'
           if-no-files-found: error
+          retention-days: 3
+
+  combine-results:
+    name: combine results
+    needs: [ 'demo-results' ]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch and combine RESULTS
+        # see https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4
+        with:
+          pattern: '${{ env.RESULTS_ARTIFACT }}_*'
+          merge-multiple: true
+          path: '${{ env.DEMO_ROOT_DIR}}'
+      - name: Artifact RESULTS
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: '${{ env.RESULTS_ARTIFACT }}-combined'
+          path: '${{ env.DEMO_ROOT_DIR}}'
+          if-no-files-found: error
+          retention-days: 3
